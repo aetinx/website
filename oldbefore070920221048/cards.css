@@ -1,0 +1,128 @@
+#works {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
+  gap: 10px;
+  margin: 100px 0;
+}
+
+.card {
+  box-sizing: border-box;
+  position: relative;
+  display: grid;
+  align-content: end;
+  gap: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), radial-gradient(100% 100% at 0% 100%, #000000 0%, rgba(0, 0, 0, 0) 100%), #ff5588;
+  border-radius: 16px;
+  padding: 50px;
+  height: 250px;
+  color: white;
+  transition: 0.5s;
+  overflow: hidden;
+
+  height: 350px;
+}
+
+.card > div > div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.card > div > div:nth-child(1) {
+  background: var(--image, #f0f);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.card[data-collapsed=false] > div > div:nth-child(1) {
+  transform: scale(1.5);
+}
+
+.card > div > div:nth-child(2) {
+  background: radial-gradient(100% 100% at 100% 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+.card > div > div:nth-child(3) {
+  transition: 0.5s;
+}
+
+.card[data-collapsed=false] > div > div:nth-child(3) {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.card > span {
+  z-index: 1;
+}
+
+.card[data-collapsed=false] {
+  height: 400px;
+}
+
+.card > span:first-child {
+  display: grid;
+  gap: 10px;
+}
+
+.card > span:first-child > span:first-child {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.card > span:first-child > span:nth-child(2) {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  line-break: anywhere;
+}
+
+.card > span:first-child > span:nth-child(2) > span:not(span:last-child) {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  font-size: 0.9em;
+  padding: 4px 7.5px;
+  display: inline-flex;
+  border-radius: 8px;
+}
+
+.card > span:first-child > span:nth-child(2) > span:not(span:last-child) + span:not(span:last-child) {
+  margin-left: -10px;
+}
+
+.card > span:last-child {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-top: 1px;
+  margin: 25px 0 -25px 0;
+  overflow: hidden;
+  transition: 0.5s;
+  height: auto;
+}
+
+.card[data-collapsed=false] > span:last-child {
+  margin-bottom: 1px;
+}
+
+.card > span:last-child a {
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 99px;
+  padding: 7.5px 15px;
+  color: white;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.card > span:last-child a:hover {
+  background: white;
+  color: black;
+}

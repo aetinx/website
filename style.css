@@ -1,0 +1,440 @@
+@font-face {
+  font-family: Inter;
+  font-style: oblique 0deg 10deg;
+  font-weight: 100 900;
+  font-display: block;
+  src: url("https://rsms.me/etc/inter-opsz/Inter-V.var.woff2") format("woff2");
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  --aetinx: #ff5588;
+  --dark: #012;
+  font-family: Inter, sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  font-variation-settings: "opsz" 32;
+  padding: 100px;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  transition: 0.25s;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+small {
+  font-size: 0.75em;
+}
+
+a[href^="http"]:after {
+  display: inline-block;
+  content: "↗";
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 18px;
+}
+
+nav > * {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav > *:first-child {
+  flex: 1;
+  gap: 10px 50px;
+}
+
+nav > *:first-child a svg {
+  height: 2em;
+  width: auto;
+  fill: var(--aetinx);
+  padding: 0;
+  margin: 0;
+}
+
+nav > *:last-child {
+  gap: 10px 25px;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 100px 0;
+}
+
+h1.title--main {
+  font-size: 72px;
+}
+
+.cardslist {
+  display: grid;
+  gap: 15px;
+}
+
+.hcard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: var(--background, #eee);
+  border-radius: 16px;
+  padding: 100px;
+  color: #555;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.card h2 {
+  margin: 0 0 25px 0;
+  font-size: 24px;
+  font-weight: inherit;
+  opacity: 0.75;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card p:not(:last-child) {
+  margin: 0 0 50px 0;
+}
+
+.card .card-footnotes {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  opacity: 0.75;
+}
+
+.card.card--stat {
+  display: grid;
+  align-items: center;
+  gap: 25px;
+  text-align: center;
+}
+
+.card.card--stat .card--stat-number {
+  font-size: 72px;
+}
+
+.card .card-chips {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card .card-chips saco-icon {
+  width: 1em;
+}
+
+.card .card-chips a {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  border-radius: 99px;
+  padding: 10px 25px;
+  color: var(--background);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.card .card-chips a:after {
+  content: none;
+}
+
+.project {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--background, #f0f);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 16px;
+  color: white;
+  height: 200px;
+  padding: 0px 100px;
+  transition: 0.5s;
+}
+
+.project > * {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.project > span {
+  z-index: 1;
+}
+
+.project > div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  border-radius: 16px;
+}
+
+.project > div:nth-child(2) {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.project > span:first-child {
+  display: grid;
+  margin-bottom: 50px;
+}
+
+.project > span:first-child > span:first-child {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.project > span:first-child > span:nth-child(2) {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.75);
+  line-break: auto;
+}
+
+.project > span:first-child > span:nth-child(2) > span:not(span:last-child) {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  font-size: 0.9em;
+  padding: 4px 7.5px;
+  display: inline-flex;
+  border-radius: 8px;
+}
+
+.project > span:last-child {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  transition: 0.5s;
+  height: auto;
+}
+
+.project > span:last-child a {
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 99px;
+  padding: 10px 25px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.project > span:last-child a:after {
+  content: none;
+}
+
+.project:hover {
+  padding: 100px;
+  transition: 0.5s;
+}
+
+.project:hover > * {
+  opacity: 1;
+}
+
+#mobile-alert {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: white;
+  padding: 50px;
+  font-size: 16px;
+  text-align: center;
+  z-index: 4206942069;
+}
+
+#mobile-alert span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px 25px;
+}
+
+#mobile-alert ~ * {
+  display: none;
+}
+
+@media only screen and (min-width: 501px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .desktop-only {
+    display: none;
+  }
+  
+  #mobile-alert {
+    display: flex;
+  }
+
+  body {
+    font-size: 20px;
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin: 50px 0;
+  }
+
+  h1.title--main {
+    font-size: 36px;
+  }
+
+  a:hover {
+    transform: none;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 -25px;
+  }
+
+  nav > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 25px;
+  }
+
+  nav > div:last-child {
+    display: none;
+  }
+
+  nav > div:last-child.opened {
+    box-sizing: border-box;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    white-space: pre;
+    overflow: scroll;
+    padding: 0 25px;
+  }
+
+  nav > div:last-child > * {
+    background: #eee;
+    border-radius: 99px;
+    padding: 10px 25px;
+  }
+
+  nav > div:last-child a:after {
+    content: "";
+  }
+
+  .cardslist {
+    margin: 0 -15px -15px -15px;
+  }
+
+  .cardslist, .hcard {
+    gap: 10px;
+  }
+
+  .hcard {
+    grid-template-columns: none;
+  }
+
+  .card, .project {
+    padding: 50px;
+  }
+
+  .card h2 {
+    font-size: 16px;
+  }
+
+  .card .card-chips {
+    display: grid;
+    gap: 10px;
+  }
+
+  .card .card-chips a {
+    justify-content: center;
+    font-size: 16px;
+    gap: 10px;
+  }
+
+  .card .card-footnotes {
+    font-size: 12px;
+  }
+
+  .card.card--stat {
+    gap: 10px;
+  }
+
+  .card.card--stat .card--stat-number {
+    font-size: 36px;
+  }
+
+  .project {
+    height: auto;
+  }
+
+  .project > * {
+    opacity: 1;
+  }
+
+  .project:hover {
+    padding: 50px;
+  }
+
+  .project:hover > * {
+    pointer-events: auto;
+  }
+
+  .project > span:first-child > span:nth-child(2) {
+    display: inline;
+    font-size: 16px;
+  }
+
+  .project > span:first-child > span:nth-child(2) > span:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  .project > span:last-child a {
+    font-size: 16px;
+  }
+}

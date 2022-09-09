@@ -1,0 +1,142 @@
+@font-face {
+  font-family: Inter;
+  font-style: oblique 0deg 10deg;
+  font-weight: 100 900;
+  font-display: block;
+  src: url("https://rsms.me/etc/inter-opsz/Inter-V.var.woff2") format("woff2");
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  --aetinx: #ff5588;
+  --dark: #012;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-variation-settings: "opsz" 32;
+  padding: 100px;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 18px;
+}
+
+nav > * {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav a:hover {
+  opacity: 0.75;
+}
+
+nav > *:first-child {
+  flex: 1;
+  gap: 50px;
+}
+
+nav > *:first-child svg {
+  height: 2em;
+  width: auto;
+  fill: var(--aetinx);
+  padding: 0;
+  margin: 0;
+}
+
+nav > *:last-child {
+  gap: 25px;
+}
+
+h1 {
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin: 100px 0 75px;
+}
+
+h1#title {
+  font-size: 96px;
+}
+
+h1 span {
+  display: inline-block;
+  animation: 0.5s header both;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+@keyframes header {
+  100% {
+    opacity: 100;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  margin: 100px 0 25px 0;
+  color: var(--aetinx);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+p {
+  margin: -0.25em 0 0 0;
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+  gap: 25px;
+  margin: 100px 0;
+}
+
+.section h2 {
+  padding-top: 100px;
+  margin: -100px 0 0 0;
+}
+
+grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+grid > * {
+  --colour: var(--aetinx);
+  
+  display: inline-flex;
+  align-items: center;
+  gap: 1em;
+  background: var(--colour);
+  border-radius: 99px;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+grid > *:hover {
+  opacity: 0.75;
+  -transform: scale(1.05) rotate(1deg);
+}
+
+grid > * saco-icon {
+  height: 18px;
+  width: 18px;
+}
