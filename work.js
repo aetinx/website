@@ -1,5 +1,5 @@
 const works = [{
-    background: "https://repository-images.githubusercontent.com/483409391/b9f31944-ba29-4f77-92b6-bf83798a45e9",
+    background: "/assets/icons v3.png",
     links: [
       ["View site", "https://icons.saco.dev"]
     ],
@@ -8,7 +8,7 @@ const works = [{
     year: 2022
   },
   {
-    background: "https://website-1.spdblx.repl.co/assets/270620222014.png",
+    background: "/assets/aetinx model 3d.png",
     links: [
       ["View on VRoid Hub", "https://hub.vroid.com/en/characters/8199759388645201687/models/849223422936800153"]
     ],
@@ -17,7 +17,7 @@ const works = [{
     year: 2022
   },
   {
-    background: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/1b6599133746813.61c493149e010.png",
+    background: "/assets/harbooru.png",
     concept: true,
     links: [
       ["View on Behance", "https://www.behance.net/gallery/133746813/Harbooru"]
@@ -27,7 +27,7 @@ const works = [{
     year: 2021
   },
   {
-    background: "https://pbs.twimg.com/media/FOH576ZX0BYACO7?format=jpg",
+    background: "/assets/photoshoot summer 21.jpg",
     links: [
       ["View on Instagram", "https://www.instagram.com/p/CYM3IbDJki2/"],
       ["View on Twitter", "https://twitter.com/aetinx/status/1504758801676881954"]
@@ -38,7 +38,7 @@ const works = [{
     year: 2021
   },
   {
-    background: "https://saco.dev/embed-thumbnail.png",
+    background: "/assets/sargent coding.png",
     links: [
       ["View site", "https://saco.dev"]
     ],
