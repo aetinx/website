@@ -292,10 +292,6 @@ h1.title--main {
   gap: 15px 25px;
 }
 
-#mobile-alert ~ * {
-  display: none;
-}
-
 @media only screen and (min-width: 501px) {
   .mobile-only {
     display: none;
@@ -309,6 +305,10 @@ h1.title--main {
   
   #mobile-alert {
     display: flex;
+  }
+
+  #mobile-alert ~ * {
+    display: none;
   }
 
   body {
