@@ -24,7 +24,7 @@ const socials = [
     "icon": "brand.reddit", "username": "u/aetinx", "url": "https://reddit.com/u/aetinx"
   },
   {
-    "icon": "brand.throne", "username": "u/aetinx", "url": "https://behance.net/aetinx"
+    "icon": "brand.throne", "username": "u/aetinx", "url": "https://throne.me/u/aetinx"
   },
   {
     "icon": "brand.discord", "username": "aetinx#8300", "url": "https://discord.com/users/723149146596311071"
@@ -38,10 +38,23 @@ const socials = [
 ]
 
 /*
-  other @aetinx accounts (unused/private):
-  facebook, douyin, vk, ok, tumblr
+  Accounts that I either don't use much/anymore,
+  or accounts that only exist to protect my username.
 
-  snapchat: @aetinx-spdblx (https://snapchat.com/add/aetinx-spdblx)
+  other @aetinx accounts
+  ----------------------
+    unused/private
+      facebook, douyin/tiktok, vk, ok, tumblr, phub,
+      xvideos, redgifs, odysee/lbry
+      
+    rarely used
+      instagram, playbook, matrix.org
+    
+    
+  not @aetinx
+    snapchat: @aetinx-spdblx (https://snapchat.com/add/aetinx-spdblx)
+    pixiv: 52120586
+    niconico: 125862157
 */
 
 const createChips = (list, element, opacity) => {

@@ -306,7 +306,7 @@ h1.title--main {
   #mobile-alert {
     display: flex;
   }
-
+  
   #mobile-alert ~ * {
     display: none;
   }
