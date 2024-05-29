@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "comment-two",
+    "question": "What languages do I know?",
+    "answer": "<p>For people languages, I only use English.</p><p>For programming languages, I’m experienced in HTML, CSS, JavaScript, and Nunjucks (NJK). Also, I have a tiny bit of understanding of Python, Java, and Unreal Engine Blueprints.</p>"
+  },
+  {
+    "icon": "toolbox",
+    "question": "What tools do I use?",
+    "answer": "<p>I like to use Replit for development, but in the past I’ve also used Glitch and JSFiddle. Then, for design, my go-to tool is Figma.</p><p>For photography, while at MMTC, I used a Panasonic Lumix DMC-GH4 with the H-FSA14140 zoom lens, as well as the Sony α7 III.</p>"
+  },
+  {
+    "icon": "controller",
+    "question": "What games do I play?",
+    "answer": "<p>While I don’t play games much, currently I’ve been having some fun with Raceroom. But, I’ve also had experience with other racing games such as Colin McRae Rally 3, Richard Burns Rally, and Auto Modellista.</p>"
+  }
+]

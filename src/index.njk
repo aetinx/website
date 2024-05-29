@@ -2,177 +2,35 @@
 layout: layouts/base.njk
 ---
 
-<link href="/images.js" rel="preload" as="script">
-<!--<script src="/images.js" defer></script>-->
 <a rel="me" href="https://mas.to/@aetinx" hidden></a>
 
-<h1>Creating magical things</h1>
-<p role="doc-subtitle">I’m an interdisciplinary designer with a passion to make computing friendlier and more enjoyable for everyone.</p>
-
-<!-- TEMP FOR REVIEW -->
-<a class="ag-card" id="ag-work" href="https://read.cv/aetinx" target="_blank" aria-label="Work">
-  <div class="ag-card-video">
-  <video autoplay loop muted>
-    <source src="https://campsite.imgix.net/o/2ua6xs4a65g4/p/3fb8d74a-9198-4b97-ae4d-740f0a9fee57.mp4">
-  </video>
-</div>
-  <div class="ag-card-overlay">
-    <div class="ag-card-overlay-content">
-      View my work
-    </div>
-  </div>
-</a>
-
-<!--<div id="ag">
-  <a class="ag-card" id="ag-work" href="https://read.cv/aetinx" target="_blank" aria-label="Work">
-    <div class="ag-card-images"></div>
-    <div class="ag-card-overlay">
-      <div class="ag-card-overlay-content">
-        Work
-      </div>
-    </div>
+<header>
+  <h1>Creating magical things</h1>
+  <p role="doc-subtitle">I’m an interdisciplinary designer with a passion to make computing friendlier and more enjoyable for everyone.</p>
+  <a class="surface-0" role="button" href="/about">
+    Read more {% symbol "arrow-right-circle" %}
   </a>
-  <div id="ags">
-    <a class="ag-card" id="ag-captures" href="https://visit.studio/aetinx" target="_blank" aria-label="Captures">
-      <div class="ag-card-images"></div>
-      <div class="ag-card-overlay">
-        <div class="ag-card-overlay-content">
-          Captures
-        </div>
-      </div>
-    </a>
-    <a class="ag-card" id="ag-selfies" href="https://twitter.com/aetinx" target="_blank" aria-label="Selfies">
-      <div class="ag-card-images"></div>
-      <div class="ag-card-overlay">
-        <div class="ag-card-overlay-content">
-          Selfies
-        </div>
-      </div>
-    </a>
-  </div>
-</div>-->
+</header>
 
-<a href="https://discord.gg/gzUwRBDQBp" id="discord-link" class="not-hyperlink" target="_blank">
-  <div class="symbol">{{ collections.symbols["brand-discord"] | safe }}</div>Join my Discord server
-</a>
-
-<div id="stats">
-{% for stat in collections.stats %}
-  <div class="stat">
-    <h2 class="stat-name">
-      <div class="symbol">{{ collections.symbols[stat.icon] | safe }}</div>
-      {{ stat.title }}
-    </h2>
-    <div class="stat-content">
-      {{ stat.content }}
+<div class="projects">
+  <div class="project">
+    <div class="project-thumbnail-holder">
+      <video autoplay loop muted>
+        <source src="https://campsite.imgix.net/o/2ua6xs4a65g4/p/3fb8d74a-9198-4b97-ae4d-740f0a9fee57.mp4">
+      </video>
     </div>
-  </div>
-{% endfor %}
+    <div class="project-details">
+      <div>Aetinx Logo Animation</div>
+      <div>Motion Design</div>
+    </div>
+  </div>{% for project in collections.projects %}
+  <div class="project">
+    <div class="project-thumbnail-holder">
+      <img src="/public/images/thumbnails/{{ project.thumbnail }}">
+    </div>
+    <div class="project-details">
+      <div>{{ project.name }}</div>
+      <div>{{ project.roles  | join(", ") }}</div>
+    </div>
+  </div>{% endfor %}
 </div>
-
-<h2 class="section-header"><div class="symbol">{{ collections.symbols["flag-pride-progress"] | safe }}</div> My pride flags</h2>
-<ul class="linear-list" id="pride-flags">
-  <li>
-    <svg width="44" height="33" viewBox="0 0 44 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_5835_844)">
-    <rect x="0.5" y="0.5" width="42.6667" height="32" rx="5.33333" fill="white"/>
-    <rect x="0.5" y="0.5" width="42.6667" height="4.57143" fill="#D460A7"/>
-    <rect x="0.5" y="5.07153" width="42.6667" height="4.57143" fill="#E4ADCD"/>
-    <rect x="0.5" y="9.64294" width="42.6667" height="4.57143" fill="white"/>
-    <rect x="0.5" y="14.2144" width="42.6667" height="4.57143" fill="#57CEF8"/>
-    <rect x="0.5" y="18.7856" width="42.6667" height="4.57143" fill="white"/>
-    <rect x="0.5" y="23.3571" width="42.6667" height="4.57143" fill="#E4ADCD"/>
-    <rect x="0.5" y="27.9286" width="42.6667" height="4.57143" fill="#D460A7"/>
-    </g>
-    <defs>
-    <clipPath id="clip0_5835_844">
-    <rect x="0.5" y="0.5" width="42.6667" height="32" rx="5.33333" fill="white"/>
-    </clipPath>
-    </defs>
-    </svg>
-    Femboy
-  </li>
-  <li>
-    <svg width="43" height="33" viewBox="0 0 43 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_5835_854)">
-    <rect x="0.166687" y="0.5" width="42.6667" height="32" rx="5.33333" fill="white"/>
-    <rect x="0.166687" y="0.5" width="42.6667" height="4.57143" fill="#808080"/>
-    <rect x="0.166687" y="5.07153" width="42.6667" height="4.57143" fill="#C5C5C5"/>
-    <rect x="0.166687" y="9.64294" width="42.6667" height="4.57143" fill="#87DCEF"/>
-    <rect x="0.166687" y="14.2144" width="42.6667" height="4.57143" fill="white"/>
-    <rect x="0.166687" y="18.7856" width="42.6667" height="4.57143" fill="#87DCEF"/>
-    <rect x="0.166687" y="23.3571" width="42.6667" height="4.57143" fill="#C5C5C5"/>
-    <rect x="0.166687" y="27.9286" width="42.6667" height="4.57143" fill="#808080"/>
-    </g>
-    <defs>
-    <clipPath id="clip0_5835_854">
-    <rect x="0.166687" y="0.5" width="42.6667" height="32" rx="5.33333" fill="white"/>
-    </clipPath>
-    </defs>
-    </svg>
-    Demiboy
-  </li>
-  <li>
-    <svg width="60" height="45" viewBox="0 0 60 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_4584_891)">
-    <rect width="60" height="15" fill="#FF218C"/>
-    <rect y="15" width="60" height="15" fill="#FFD800"/>
-    <rect y="30" width="60" height="15" fill="#21B1FF"/>
-    </g>
-    <defs>
-    <clipPath id="clip0_4584_891">
-    <rect width="60" height="45" rx="7.5" fill="white"/>
-    </clipPath>
-    </defs>
-    </svg>
-    Pansexual
-  </li>
-  <li>
-    <svg width="44" height="33" viewBox="0 0 44 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_5835_874)">
-    <path d="M0.500019 32.5L53.7243 32.5V21.8331L0.500019 21.8331V32.5Z" fill="#340C46"/>
-    <path d="M0.500019 21.8331L53.7243 21.8331V11.1663L0.500019 11.1663V21.8331Z" fill="#E50051"/>
-    <path d="M0.500019 11.1667L53.7243 11.1667V0.499889L0.500019 0.499889V11.1667Z" fill="#009FE3"/>
-    <path d="M11.1669 0.5H0.5V32.5L21.8331 11.1669L11.1669 0.5Z" fill="white"/>
-    <path d="M5.6618 5.95553C4.28582 7.33151 4.28582 9.56337 5.6618 10.9394L5.88182 11.1594L5.6474 11.3938C4.27142 12.7698 4.27142 15.0016 5.6474 16.3776C7.02338 17.7536 9.25524 17.7536 10.6312 16.3776L10.8656 16.1432L15.8495 11.1594L15.895 11.1139L10.8789 6.18822L10.8656 6.17498L10.6456 5.95496C9.26964 4.57898 7.03778 4.57898 5.6618 5.95496V5.95553Z" fill="#FCBF00"/>
-    </g>
-    <defs>
-    <clipPath id="clip0_5835_874">
-    <rect x="0.5" y="0.5" width="42.6667" height="32" rx="5.33333" fill="white"/>
-    </clipPath>
-    </defs>
-    </svg>
-    Polyamorous
-  </li>
-</ul>
-
-<h2 class="section-header"><div class="symbol">{{ collections.symbols["heart"] | safe }}</div> Stuff that I enjoy</h2>
-<ul class="linear-list">
-  <li class="text">Emo and alt style</li>
-  <li class="text">Neon Genesis: Evangelion</li>
-  <li class="text">The colour pink</li>
-  <li class="text">Femboy fashion</li>
-  <li class="text">Eggnog</li>
-  <li class="text">Chatting on Discord</li>
-  <li class="text">Pinterest</li>
-  <li class="text">Yami kawaii</li>
-  <li class="text">Colin McRae Rally 3</li>
-  <li class="text">Auto Modellista</li>
-  <li class="text">French toast sticks</li>
-  <li class="text">Taquitos</li>
-</ul>
-
-<h2 class="section-header"><div class="symbol">{{ collections.symbols["comment"] | safe }}</div> Contact</h2>
-<ul class="linear-list">
-  <li class="text"><a href="https://twitter.com/aetinx" target="_blank">Twitter</a></li>
-  <li class="text"><a href="https://instagram.com/aetinx" target="_blank">Instagram</a></li>
-  <li class="text"><a href="https://github.com/aetinx" target="_blank">GitHub</a></li>
-  <li class="text"><a href="https://reddit.com/user/aetinx" target="_blank">Reddit</a></li>
-  <li class="text"><a href="https://pinterest.com/aetinx" target="_blank">Pinterest</a></li>
-  <li class="text"><a href="https://tumblr.com/aetinx" target="_blank">Tumblr</a></li>
-  <li class="text"><a href="https://behance.net/aetinx" target="_blank">Behance</a></li>
-  <li class="text"><a href="https://read.cv/aetinx" target="_blank">Read.cv</a></li>
-  <li class="text"><a href="https://dribbble.com/aetinx" target="_blank">Dribbble</a></li>
-  <li class="text"><a href="https://visit.studio/aetinx" target="_blank">Studio</a></li>
-  <li class="text"><a href="mailto:hello@aetinx.dev" target="_blank">Email</a></li>
-</ul>

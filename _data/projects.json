@@ -1,51 +1,32 @@
 [
   {
-    "link": "https://github.com/latapals/jumblejot",
+    "name": "Latapals",
+    "roles": ["Founder", "Design", "Development"],
+    "thumbnail": "latapals.png"
+  },
+  {
     "name": "Jumblejot",
-    "thumbnail": "jumblejot.svg",
-    "year": "Ongoing"
+    "roles": ["Design", "Development"],
+    "thumbnail": "jumblejot.png"
   },
   {
-    "link": "https://discord.gg/ZYwF9q8ChB",
-    "name": "Latapals ZZ",
-    "thumbnail": "zz.svg",
-    "year": "Ongoing"
+    "name": "Latapals Symbols",
+    "roles": ["Iconography", "Development"],
+    "thumbnail": "symbols.png"
   },
   {
-    "link": "https://github.com/latapals/icons",
-    "name": "Latapals Icons",
-    "thumbnail": "icons.svg",
-    "year": 2022
+    "name": "Aetinx Flags",
+    "roles": ["Design"],
+    "thumbnail": "flags.png"
   },
   {
-    "link": "https://github.com/latapals/colours",
-    "name": "Latapals Colours",
-    "thumbnail": "colours.svg",
-    "year": 2022
+    "name": "Aetinx Emoji",
+    "roles": ["Design"],
+    "thumbnail": "emoji.png"
   },
   {
-    "link": "https://hub.vroid.com/en/characters/8199759388645201687/",
-    "name": "Aetinx Model",
-    "thumbnail": "model.png",
-    "year": "2020 - 2022"
-  },
-  {
-    "link": "https://twitter.com/aetinx/status/1504758801676881954",
-    "name": "Summer Photoshoot",
-    "thumbnail": "summerphotos.jpg",
-    "year": 2021
-  },
-  {
-    "link": "https://www.behance.net/gallery/133746813/Harbooru",
-    "name": "Harbooru",
-    "thumbnail": "harbooru.svg",
-    "type": "Concept",
-    "year": 2021
-  },
-  {
-    "link": "https://www.behance.net/gallery/151489989/Archive-wasteofmoney",
-    "name": "Branding at wasteof.money",
-    "thumbnail": "wom.svg",
-    "year": 2021
+    "name": "Kitt Design",
+    "roles": ["Design", "Development"],
+    "thumbnail": "kitt.png"
   }
 ]

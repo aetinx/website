@@ -4,6 +4,10 @@ title: "Commissions"
 description: "If you're looking for a designer to collaborate with, you've come to the right place."
 ---
 
+Page being redone!
+
+Keep in mind that you're on the beta version of this site.
+<!--
 If you want a commission, you can send me an email at [hello@aetinx.dev](mailto:hello@aetinx.dev), or message me on a platform that I'm active on, like Discord.
 
 Branding commissions currently start at the amazing price of $500 USD<sup><a href="#fn1" id="ref1">1</a></sup>.
@@ -19,3 +23,4 @@ Currently, I can only take payments via these gift cards<sup><a href="#fn2" id="
 * [Amazon](https://amazon.com/dp/B004LLIKVU)
 
 <small><sup id="fn2">2</sup>Once I eventually get myself a bank account, orders will be available via Stripe Invoices.</small>
+-->

@@ -33,11 +33,11 @@ templateClass: tmpl-base
   
   <link rel="canonical" href="https://aetinx.dev{{ page.url | url }}"/>
 
-  <link rel="preload" as="style" href="/style.css" />
-  <link rel="stylesheet" href="/style.css" />
-  <link rel="icon" type="image/svg+xml" href="/brand/logo.svg"/>
+  <link rel="preload" as="style" href="/public/styles/main.css" />
+  <link rel="stylesheet" href="/public/styles/main.css" />
+  <link rel="icon" type="image/svg+xml" href="/public/images/logo.svg"/>
 
-  <script src="/script.js" defer></script>
+  <script src="/public/scripts/main.js" type="module" defer></script>
 </head>
 
 <nav>
@@ -59,34 +59,32 @@ templateClass: tmpl-base
     </a>
   </div>
   <div class="nav-pages">
+    <a href="/about">About</a>
     <a href="https://read.cv/aetinx" target="_blank">Resume</a>
     <a href="/commissions">Commissions</a>
-    <a href="/wishlist" target="_blank">Wishlist</a>
   </div>
   <div class="nav-socials">
     <a class="not-hyperlink" href="https://twitter.com/aetinx" target="_blank" aria-label="Twitter">
-      <div class="symbol">{{ collections.symbols["brand-twitter"] | safe }}</div>
+      {% symbol "brand-twitter" %}
     </a>
-    <a class="not-hyperlink" href="https://instagram.com/aetinx" target="_blank" aria-label="Instagram">
-      <div class="symbol">{{ collections.symbols["brand-instagram"] | safe }}</div>
+    <a class="not-hyperlink" href="https://behance.net/aetinx" target="_blank" aria-label="Behance">
+      {% symbol "brand-behance" %}
     </a>
     <a class="not-hyperlink"href="https://github.com/aetinx" target="_blank" aria-label="GitHub">
-      <div class="symbol">{{ collections.symbols["brand-github"] | safe }}</div>
-    </a>
-    <a class="not-hyperlink"href="https://reddit.com/u/aetinx" target="_blank" aria-label="Reddit">
-      <div class="symbol">{{ collections.symbols["brand-reddit"] | safe }}</div>
-    </a>
-    <a class="not-hyperlink"href="https://pinterest.com/aetinx" target="_blank" aria-label="Pinterest">
-      <div class="symbol">{{ collections.symbols["brand-pinterest"] | safe }}</div>
+      {% symbol "brand-github" %}
     </a>
     <a class="not-hyperlink"href="https://discord.gg/gzUwRBDQBp" target="_blank" aria-label="Discord">
-      <div class="symbol">{{ collections.symbols["brand-discord"] | safe }}</div>
+      {% symbol "brand-discord" %}
+    </a>
+    <a class="not-hyperlink" href="https://todays.design/aetinx" target="_blank" aria-label="Todays.Design">
+      {% symbol "button-radio" %}
     </a>
   </div>
 </nav>
 
 <main>
   {% if title %}<h1>{{ title }}</h1>{% endif %}
+  {% if subtitle %}<p role="doc-subtitle">{{ subtitle }}</p>{% endif %}
   {{ content | safe }}
 </main>
 

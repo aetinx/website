@@ -22,8 +22,18 @@ module.exports = function(eleventyConfig) {
   const stats = require("./_data/stats.json")
   eleventyConfig.addCollection("stats", function() { return stats })
 
+  const qa = require("./_data/qa.json")
+  eleventyConfig.addCollection("qa", function() { return qa })
+  
   const symbols = require("./_data/symbols.json")
   eleventyConfig.addCollection("symbols", function() { return symbols })
+
+  eleventyConfig.addNunjucksShortcode(
+    "symbol",
+    function (value) {
+      return `<div class="symbol">${symbols[value]}</div>`
+    }
+  )
 
   // Filters let you modify the content https://www.11ty.dev/docs/filters/
   eleventyConfig.addFilter("htmlDateString", dateObj => {
