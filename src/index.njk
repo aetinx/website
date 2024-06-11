@@ -7,8 +7,8 @@ layout: layouts/base.njk
 <header>
   <h1>Creating magical things</h1>
   <p role="doc-subtitle">I’m an interdisciplinary designer with a passion to make computing friendlier and more enjoyable for everyone.</p>
-  <a class="surface-0" role="button" href="/about">
-    Read more {% symbol "arrow-right-circle" %}
+  <a class="surface-0" role="button" href="/about" aria-label="Read about Aetinx">
+    Read about me{% symbol "arrow-right-circle" %}
   </a>
 </header>
 
@@ -26,7 +26,7 @@ layout: layouts/base.njk
   </div>{% for project in collections.projects %}
   <div class="project">
     <div class="project-thumbnail-holder">
-      <img src="/public/images/thumbnails/{{ project.thumbnail }}">
+      <img src="/public/images/thumbnails/{{ project.thumbnail }}" alt="{{ project.name }}">
     </div>
     <div class="project-details">
       <div>{{ project.name }}</div>
