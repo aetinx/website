@@ -218,29 +218,6 @@ header {
 }
 
 @media screen and (max-width: 900px) {
-  :root {
-    --aet-padding-body: 40px;
-    --aet-padding-card: 32px;
-    --aet-spacing-xxl: 48px;
-    --aet-spacing-xl: 36px;
-    --aet-spacing-l: 24px;
-    --aet-spacing-m: 20px;
-    --aet-spacing-s: 16px;
-    --aet-spacing-xs: 8px;
-    --aet-spacing-xxs: 4px;
-    --aet-height-button: 40px;
-    --aet-radius-pill: 99999px;
-    --aet-radius-m: 8px;
-    --aet-radius-s: 8px;
-
-    --aet-font-size-body-small: 14px;
-    --aet-font-size-body-medium: 16px;
-    --aet-font-size-body-large: 18px;
-    --aet-font-size-display-small: 20px;
-    --aet-font-size-display-medium: 32px;
-    --aet-font-size-display-large: 48px;
-  }
-  
   nav {
     flex-direction: column;
     align-items: unset;
@@ -296,5 +273,30 @@ header {
 
   nav.open .nav-toggle svg path:last-child {
     rotate: 180deg;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  :root {
+    --aet-padding-body: 40px;
+    --aet-padding-card: 32px;
+    --aet-spacing-xxl: 48px;
+    --aet-spacing-xl: 36px;
+    --aet-spacing-l: 24px;
+    --aet-spacing-m: 20px;
+    --aet-spacing-s: 16px;
+    --aet-spacing-xs: 8px;
+    --aet-spacing-xxs: 4px;
+    --aet-height-button: 40px;
+    --aet-radius-pill: 99999px;
+    --aet-radius-m: 8px;
+    --aet-radius-s: 8px;
+
+    --aet-font-size-body-small: 14px;
+    --aet-font-size-body-medium: 16px;
+    --aet-font-size-body-large: 18px;
+    --aet-font-size-display-small: 20px;
+    --aet-font-size-display-medium: 32px;
+    --aet-font-size-display-large: 48px;
   }
 }
