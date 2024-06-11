@@ -82,6 +82,7 @@ h1 {
 p {
   font-size: var(--aet-font-size-display-small);
   line-height: 1.5;
+  color: var(--aet-color-foreground-variant);
 
   + p {
     margin-top: .5em;
@@ -91,6 +92,14 @@ p {
 p[role="doc-subtitle"] {
   color: var(--aet-color-foreground-variant);
   margin-bottom: var(--aet-spacing-l);
+}
+
+li {
+  font-size: var(--aet-font-size-display-small);
+}
+
+p a, li a {
+  color: var(--aet-color-foreground);
 }
 
 h3 {
@@ -169,7 +178,7 @@ nav a {
   text-decoration: none;
 }
 
-header {
+header:has(p) {
   margin-bottom: var(--aet-spacing-xxl);
 }
 
@@ -225,7 +234,6 @@ header {
 
   nav.open {
     position: fixed;
-    gap: var(--aet-spacing-xxl);
     inset: 0;
     padding: var(--aet-padding-body);
     background: var(--color-background);
@@ -298,5 +306,9 @@ header {
     --aet-font-size-display-small: 20px;
     --aet-font-size-display-medium: 32px;
     --aet-font-size-display-large: 48px;
+  }
+
+  nav.open {
+    gap: var(--aet-spacing-xxl);
   }
 }

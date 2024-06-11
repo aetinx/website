@@ -83,8 +83,10 @@ templateClass: tmpl-base
 </nav>
 
 <main>
-  {% if title %}<h1>{{ title }}</h1>{% endif %}
-  {% if subtitle %}<p role="doc-subtitle">{{ subtitle }}</p>{% endif %}
+  <header>
+    {% if title %}<h1>{{ title }}</h1>{% endif %}
+    {% if subtitle %}<p role="doc-subtitle">{{ subtitle }}</p>{% endif %}
+  </header>
   {{ content | safe }}
 </main>
 

@@ -1,12 +1,10 @@
 ---
 layout: layouts/base.njk
 title: "Commissions"
+subtitle: "Commissions aren't here yet, but look out in the near future!"
 description: "If you're looking for a designer to collaborate with, you've come to the right place."
 ---
 
-Page being redone!
-
-Keep in mind that you're on the beta version of this site.
 <!--
 If you want a commission, you can send me an email at [hello@aetinx.dev](mailto:hello@aetinx.dev), or message me on a platform that I'm active on, like Discord.
 
