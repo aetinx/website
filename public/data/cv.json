@@ -1,0 +1,356 @@
+{
+  "general": {
+    "profilePhoto": "/assets/cv/profilePhoto.jpg",
+    "username": "aetinx",
+    "displayName": "Adrian Keim",
+    "profession": "Product Designer",
+    "location": null,
+    "pronouns": "they/them",
+    "byline": "Product Designer, they/them",
+    "website": "aetinx.dev",
+    "websiteURL": "http://aetinx.dev",
+    "about": "I'm an interdisciplinary designer and developer with a passion to bring my ideas to life, and use them to make the world a little bit better. 💖\n\nNote: The name that I use differs from my currently-held legal name.",
+    "status": {
+      "text": null,
+      "emoji": null,
+      "timestamp": null
+    },
+    "sectionOrder": [
+      "Projects",
+      "Side Projects",
+      "Exhibitions",
+      "Speaking",
+      "Writing",
+      "Awards",
+      "Features",
+      "Work Experience",
+      "Volunteering",
+      "Education",
+      "Certifications",
+      "Contact",
+      "Teams"
+    ]
+  },
+  "projects": [
+    {
+      "id": "tzIcxV8UaUt3wy3yYK7M",
+      "year": "Ongoing",
+      "heading": "Custom Liveries (NR2003 NCS22 Mod)",
+      "url": null,
+      "collaborators": [],
+      "description": "A set of custom liveries for the Full Circle Racing Designs NCS22 mod for NASCAR Racing 2003 Season.",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 1920,
+          "height": 1080,
+          "url": "/assets/cv/Custom-Liveries-NR2003-NCS22-Mod-1.png"
+        },
+        {
+          "type": "image",
+          "width": 1920,
+          "height": 1080,
+          "url": "/assets/cv/Custom-Liveries-NR2003-NCS22-Mod-2.png"
+        },
+        {
+          "type": "image",
+          "width": 1920,
+          "height": 1080,
+          "url": "/assets/cv/Custom-Liveries-NR2003-NCS22-Mod-3.png"
+        },
+        {
+          "type": "image",
+          "width": 1920,
+          "height": 1080,
+          "url": "/assets/cv/Custom-Liveries-NR2003-NCS22-Mod-4.png"
+        },
+        {
+          "type": "image",
+          "width": 1920,
+          "height": 1080,
+          "url": "/assets/cv/Custom-Liveries-NR2003-NCS22-Mod-5.png"
+        },
+        {
+          "type": "image",
+          "width": 1920,
+          "height": 1080,
+          "url": "/assets/cv/Custom-Liveries-NR2003-NCS22-Mod-6.png"
+        },
+        {
+          "type": "image",
+          "width": 1920,
+          "height": 1080,
+          "url": "/assets/cv/Custom-Liveries-NR2003-NCS22-Mod-7.png"
+        }
+      ],
+      "type": "project",
+      "title": "Custom Liveries (NR2003 NCS22 Mod)",
+      "company": ""
+    },
+    {
+      "id": "pOyhUhSESINj6ZZioIg3",
+      "year": "Ongoing",
+      "heading": "Latapals Flags at Latapals",
+      "url": null,
+      "collaborators": [],
+      "description": "An extensive open-source flag set with ≈550 flags for nations, micronations, languages, ideologies, and other more.",
+      "attachments": [],
+      "type": "project",
+      "title": "Latapals Flags",
+      "company": "Latapals"
+    },
+    {
+      "id": "wjL0vBwOwFOxJBNzGW5J",
+      "year": "Ongoing",
+      "heading": "Latapals Symbols at Latapals",
+      "url": "https://github.com/latapals/symbols",
+      "collaborators": [],
+      "description": "An open-source icon library made for Latapals projects and anyone that needs an icon pack for their projects.",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 3840,
+          "height": 2160,
+          "url": "/assets/cv/Latapals-Symbols-at-Latapals.png"
+        }
+      ],
+      "type": "project",
+      "title": "Latapals Symbols",
+      "company": "Latapals"
+    }
+  ],
+  "sideProjects": [
+    {
+      "id": "I8QzV8BWtSTWWDA8RxyQ",
+      "year": "2024",
+      "heading": "Racing HUD Concept",
+      "url": null,
+      "collaborators": [],
+      "description": "Experimenting with making a racing HUD for fun.",
+      "attachments": [
+        {
+          "type": "image",
+          "width": 2924,
+          "height": 1656,
+          "url": "/assets/cv/Racing-HUD-Concept.png"
+        }
+      ],
+      "type": "sideProject",
+      "title": "Racing HUD Concept",
+      "company": ""
+    }
+  ],
+  "exhibitions": [],
+  "talks": [],
+  "writing": [],
+  "awards": [],
+  "features": [],
+  "workExperience": [
+    {
+      "id": "yIIWMgGD3OnqR9xlLX43",
+      "year": "2024 — Now",
+      "heading": "Founder at Latapals",
+      "url": "https://lata.dev",
+      "collaborators": [],
+      "description": "Internet friends making a friendlier internet.",
+      "attachments": [],
+      "type": "workExperience",
+      "title": "Founder",
+      "company": "Latapals",
+      "location": "World Wide Web"
+    }
+  ],
+  "volunteering": [],
+  "education": [],
+  "certifications": [],
+  "contact": [
+    {
+      "id": "PfZBfjyM9KUfZ05TJ2Ua",
+      "platform": "Discord",
+      "handle": "aetinx",
+      "url": "http://discord.gg/gzUwRBDQBp"
+    },
+    {
+      "id": "Z4muor7y2PstkhzYLc6x",
+      "platform": "Email",
+      "handle": "hello@aetinx.dev",
+      "url": "mailto:hello@aetinx.dev"
+    },
+    {
+      "id": "ecehT9gFTHecqYkVoqen",
+      "platform": "Bluesky",
+      "handle": "@aetinx.dev",
+      "url": "https://bsky.app/profile/aetinx.dev"
+    },
+    {
+      "id": "7NNEJF2R6iUXolKyCpJ9",
+      "platform": "Twitter",
+      "handle": "@aetinx",
+      "url": "https://x.com/aetinx"
+    }
+  ],
+  "allCollections": [
+    {
+      "name": "Projects",
+      "items": [
+        {
+          "id": "tzIcxV8UaUt3wy3yYK7M",
+          "year": "Ongoing",
+          "heading": "Custom Liveries (NR2003 NCS22 Mod)",
+          "url": null,
+          "collaborators": [],
+          "description": "A set of custom liveries for the Full Circle Racing Designs NCS22 mod for NASCAR Racing 2003 Season.",
+          "attachments": [
+            {
+              "type": "image",
+              "width": 1920,
+              "height": 1080,
+              "url": "/assets/cv/Custom-Liveries-NR2003-NCS22-Mod-1.png"
+            },
+            {
+              "type": "image",
+              "width": 1920,
+              "height": 1080,
+              "url": "/assets/cv/Custom-Liveries-NR2003-NCS22-Mod-2.png"
+            },
+            {
+              "type": "image",
+              "width": 1920,
+              "height": 1080,
+              "url": "/assets/cv/Custom-Liveries-NR2003-NCS22-Mod-3.png"
+            },
+            {
+              "type": "image",
+              "width": 1920,
+              "height": 1080,
+              "url": "/assets/cv/Custom-Liveries-NR2003-NCS22-Mod-4.png"
+            },
+            {
+              "type": "image",
+              "width": 1920,
+              "height": 1080,
+              "url": "/assets/cv/Custom-Liveries-NR2003-NCS22-Mod-5.png"
+            },
+            {
+              "type": "image",
+              "width": 1920,
+              "height": 1080,
+              "url": "/assets/cv/Custom-Liveries-NR2003-NCS22-Mod-6.png"
+            },
+            {
+              "type": "image",
+              "width": 1920,
+              "height": 1080,
+              "url": "/assets/cv/Custom-Liveries-NR2003-NCS22-Mod-7.png"
+            }
+          ],
+          "type": "project",
+          "title": "Custom Liveries (NR2003 NCS22 Mod)",
+          "company": ""
+        },
+        {
+          "id": "pOyhUhSESINj6ZZioIg3",
+          "year": "Ongoing",
+          "heading": "Latapals Flags at Latapals",
+          "url": null,
+          "collaborators": [],
+          "description": "An extensive open-source flag set with ≈550 flags for nations, micronations, languages, ideologies, and other more.",
+          "attachments": [],
+          "type": "project",
+          "title": "Latapals Flags",
+          "company": "Latapals"
+        },
+        {
+          "id": "wjL0vBwOwFOxJBNzGW5J",
+          "year": "Ongoing",
+          "heading": "Latapals Symbols at Latapals",
+          "url": "https://github.com/latapals/symbols",
+          "collaborators": [],
+          "description": "An open-source icon library made for Latapals projects and anyone that needs an icon pack for their projects.",
+          "attachments": [
+            {
+              "type": "image",
+              "width": 3840,
+              "height": 2160,
+              "url": "/assets/cv/Latapals-Symbols-at-Latapals.png"
+            }
+          ],
+          "type": "project",
+          "title": "Latapals Symbols",
+          "company": "Latapals"
+        }
+      ]
+    },
+    {
+      "name": "Side Projects",
+      "items": [
+        {
+          "id": "I8QzV8BWtSTWWDA8RxyQ",
+          "year": "2024",
+          "heading": "Racing HUD Concept",
+          "url": null,
+          "collaborators": [],
+          "description": "Experimenting with making a racing HUD for fun.",
+          "attachments": [
+            {
+              "type": "image",
+              "width": 2924,
+              "height": 1656,
+              "url": "/assets/cv/Racing-HUD-Concept.png"
+            }
+          ],
+          "type": "sideProject",
+          "title": "Racing HUD Concept",
+          "company": ""
+        }
+      ]
+    },
+    {
+      "name": "Work Experience",
+      "items": [
+        {
+          "id": "yIIWMgGD3OnqR9xlLX43",
+          "year": "2024 — Now",
+          "heading": "Founder at Latapals",
+          "url": "https://lata.dev",
+          "collaborators": [],
+          "description": "Internet friends making a friendlier internet.",
+          "attachments": [],
+          "type": "workExperience",
+          "title": "Founder",
+          "company": "Latapals",
+          "location": "World Wide Web"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "items": [
+        {
+          "id": "PfZBfjyM9KUfZ05TJ2Ua",
+          "platform": "Discord",
+          "handle": "aetinx",
+          "url": "http://discord.gg/gzUwRBDQBp"
+        },
+        {
+          "id": "Z4muor7y2PstkhzYLc6x",
+          "platform": "Email",
+          "handle": "hello@aetinx.dev",
+          "url": "mailto:hello@aetinx.dev"
+        },
+        {
+          "id": "ecehT9gFTHecqYkVoqen",
+          "platform": "Bluesky",
+          "handle": "@aetinx.dev",
+          "url": "https://bsky.app/profile/aetinx.dev"
+        },
+        {
+          "id": "7NNEJF2R6iUXolKyCpJ9",
+          "platform": "Twitter",
+          "handle": "@aetinx",
+          "url": "https://x.com/aetinx"
+        }
+      ]
+    }
+  ]
+}

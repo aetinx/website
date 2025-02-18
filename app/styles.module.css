@@ -1,0 +1,16 @@
+.lovedBy {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  margin-top: 64px;
+}
+
+.lovedByText {
+  flex-shrink: 0;
+  color: var(--on-surface-variant);
+}
+
+.lovedByLogos {
+  background: red;
+  width: 100%;
+}

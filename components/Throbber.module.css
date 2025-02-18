@@ -1,0 +1,39 @@
+.main {
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  animation: rotate 3s infinite linear;
+}
+
+.track {
+  stroke: currentColor;
+}
+
+.tail {
+  animation: dash 1.5s infinite cubic-bezier(0.33, 0, 0.67, 1);
+  stroke: currentColor;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 0, 1;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 1, 1;
+    stroke-dashoffset: -0.5;
+  }
+  100% {
+    stroke-dasharray: 1, 1;
+    stroke-dashoffset: -1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}

@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #ff0099;
+
+  --surface: #090909;
+  --surface-container: #292929;
+  --on-surface: white;
+  --on-surface-variant: #777;
+
+  --state-hover-opacity: 0.08;
+  --state-focus-opacity: 0.1;
+  --state-press-opacity: 0.1;
+  --state-drag-opacity: 0.16;
+
+  --font-size-label-small: 18px;
+  --font-size-label-medium: 20px;
+  --font-size-label-large: 24px;
+  --font-size-body: 28px;
+  --font-size-display: 52px;
+
+  font-family: InterVariable, Inter, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1, "ss07" on, "ss08" on, "cv01" on, "cv10" on;
+  font-variation-settings: "opsz" 32;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  scrollbar-color: #777 #292929;
+}
+
+html {
+  background: var(--surface);
+  color: var(--on-surface);
+  padding: 0;
+  margin: 0;
+}
+
+#body {
+  box-sizing: content-box;
+  padding: 96px;
+  margin: 0 auto;
+  max-width: 960px;
+  --x-cb: cubic-bezier(.75, 0, 0.25, 1);
+  animation: showBody 2s var(--x-cb);
+}
+
+#body > div {
+  animation: show 3s var(--x-cb);
+  animation-fill-mode: both;
+  will-change: filter;
+}
+
+#alert {
+  background: var(--surface-container);
+  color: var(--on-surface-variant);
+  padding: 0.5em 1em;
+  font-size: 18px;
+}
+
+#alert > * {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@keyframes show {
+  from {
+    translate: 0 256px;
+    opacity: 0;
+    filter: blur(64px);
+  }
+
+  25% {
+    opacity: 0;
+  }
+}
+
+@keyframes showBody {
+  from {
+    opacity: 0;
+    filter: blur(64px);
+  }
+
+  25% {
+    opacity: 0;
+  }
+}
+
+*, button, ::-webkit-scrollbar {
+  cursor: url("/assets/figma_cursors/1.svg"), auto;
+}
+
+a[href]:not(.button):not(button), a[href]:not(.button):not(button) * {
+  cursor: url("/assets/figma_cursors/13.svg"), pointer;
+}
+
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 5px auto Highlight;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: 2px;
+}
+
+nav {
+  margin-bottom: 72px;
+}
+
+#nav-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+main {
+  margin-top: 128px;
+}
+
+h1 {
+  font-size: var(--font-size-display);
+  margin: 32px 0;
+}
+
+p {
+  line-height: 1.5;
+  color: var(--on-surface-variant);
+
+  &[role="doc-subtitle"] {
+    font-size: var(--font-size-body);
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 9999px;
+  background: var(--surface-container);
+  color: var(--on-surface);
+  height: 40px;
+  padding: 0 20px;
+  overflow: hidden;
+
+  &:not([disabled]):hover {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(from var(--on-surface) r g b / var(--state-hover-opacity));
+    }
+  }
+}
+
+[disabled] {
+  opacity: 0.5;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+
+@media only screen and (max-width: 900px) {
+  :root {
+    --font-size-body: 20px;
+    --font-size-display: 36px;
+  }
+
+  body {
+    padding: 48px;
+  }
+
+  .lovedBy {
+    display: none !important;
+  }
+
+  .projects {
+    gap: 48px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: unset !important;
+  }
+
+  nav.open {
+    position: fixed;
+    gap: 50px;
+    inset: 0;
+    background: var(--color-background);
+    padding: var(--margin-xl);
+    margin-bottom: 0;
+    z-index: 2;
+    padding: 48px;
+  }
+
+  nav.open ~ * {
+    visibility: none;
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+
+  #nav-toggle {
+    display: block;
+  }
+
+  #nav-links, #nav-socials {
+    display: none;
+  }
+
+  #nav-links {
+    flex-direction: column;
+    gap: 16px;
+    font-size: 32px;
+    flex-shrink: 0;
+
+    a {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      height:  fit-content;
+      flex-shrink: 0;
+    }
+  }
+
+  nav.open #nav-links,
+  nav.open #nav-socials {
+    display: flex;
+  }
+
+  nav .nav-toggle svg {
+    transform-box: fill-box;
+  }
+
+  nav #nav-toggle svg path {
+    rotate: 0deg;
+    transform-origin: 9px 9px;
+    transition: 0.5s;
+  }
+
+  nav.open #nav-toggle svg path:first-child {
+    rotate: 270deg;
+  }
+
+  nav.open #nav-toggle svg path:last-child {
+    rotate: 180deg;
+  }
+
+  [class^=WorkItem] {
+    & > img {
+      border-radius: 12px !important;
+    }
+
+    & > div {
+      flex-direction: column;
+      text-align: left;
+      gap: 0.25em;
+
+      span {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: var(--on-surface-variant);
+  gap: 48px;
+
+  & a {
+    padding: 8px;
+    margin: -8px;
+    transition: color 0.5s;
+  }
+
+  & a:hover {
+    color: var(--on-surface);
+    transition: color 0s;
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 48px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.logo {
+  height: 28px;
+  aspect-ratio: 1 / 1;
+}
+
+.logo path {
+  fill: var(--primary);
+}

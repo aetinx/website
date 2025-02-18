@@ -1,0 +1,18 @@
+.section {
+  margin: 72px 0;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 32px;
+  margin: 32px 0;
+}
+
+.article > div:first-child > span {
+  color: var(--on-surface-variant);
+}
+
+.article * {
+  line-height: 1.5em;
+}

@@ -1,0 +1,20 @@
+.main {
+  display: grid;
+  gap: 24px;
+}
+
+.main img {
+  border-radius: 24px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  color: var(--on-surface-variant);
+  gap: 32px;
+}
+
+.info :first-child {
+  color: var(--on-surface);
+  flex-grow: 1;
+}
