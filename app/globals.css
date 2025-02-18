@@ -176,7 +176,7 @@ p {
     --font-size-display: 36px;
   }
 
-  body {
+  #body {
     padding: 48px;
   }
 
@@ -209,6 +209,14 @@ p {
     height: 0;
     width: 0;
     opacity: 0;
+  }
+
+  html:has(nav.open) #body {
+    overflow: hidden;
+  }
+
+  html:has(nav.open) #alert {
+    display: none;
   }
 
   #nav-toggle {
