@@ -1,4 +1,5 @@
-import MusicPlayer from "@components/MusicPlayer.jsx"
+import dynamic from "next/dynamic"
+const MusicPlayer = dynamic(() => import("@components/MusicPlayer"), { ssr: false })
 //import Clock from "@components/Clock"
 
 export const metadata = {

@@ -1,4 +1,4 @@
-import profileData from "/public/data/cv.json"
+import profileData from "@data/cv.json"
 import styles from "./styles.module.css"
 
 export const metadata = {
@@ -74,7 +74,7 @@ export default function About() {
                   <span>{ item.platform }</span>
                 </div>
                 <div>
-                  <div>{ item.url ? <a href={item.url} target="_blank">{ item.handle }&nbsp;<sup>↗</sup></a> : handle }</div>
+                  <div>{ item.url ? <a href={item.url} target="_blank">{ item.handle }&nbsp;<sup>↗</sup></a> : item.handle }</div>
                 </div>
               </article>
             )

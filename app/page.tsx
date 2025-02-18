@@ -1,12 +1,20 @@
 import * as Symbols from "@latapals/symbols"
 import WorkItem from "@components/WorkItem"
 import Link from "next/link"
-import projectData from "/public/data/projects.json"
+import projectData from "@data/projects.json"
 import InfiniteScrollClient from "@components/InfiniteScrollClient"
 import styles from "./styles.module.css"
 import Marquee from "react-fast-marquee"
 
-const projects = projectData
+type Project = {
+  thumbnail: string
+  title: string
+  status: string
+  company?: string  // Marking it as optional
+  year?: string
+}
+
+const projects: Project[] = projectData
 
 export default async function Homepage() {
   const logos = [

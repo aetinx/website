@@ -27,6 +27,7 @@
       "@app/*": ["./app/*"],
       "@assets/*": ["./assets/*"],
       "@components/*": ["./components/*"],
+      "@data/*": ["./data/*"],
       "@styles/*": ["./styles/*"],
       "@utils/*": ["./utils/*"]
     }
