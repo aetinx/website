@@ -24,7 +24,7 @@ const fetchAndCache = async url => {
 
 const findClientID = async () => {
   console.debug("Fetching SoundCloud website...")
-  let website = await fetchAndCache(nc2$("https://soundcloud.com")).then(res => res.text())
+  let website = await fetch(nc2$("https://soundcloud.com")).then(res => res.text())
   let scVersion = String(website.match(/<script>window\.__sc_version="[0-9]{10}"<\/script>/)[0].match(/[0-9]{10}/))
   console.debug(`Viewing SoundCloud version ${scVersion}.`)
   let scripts = website.matchAll(/<script.+src="(.+)">/g)
@@ -55,7 +55,7 @@ const getStream = async song => {
   let fileURLBase = song.media.transcodings.find(x => x.format.protocol == "hls").url
   //console.debug(`Getting stream from "${fileURLBase}"...`)
   let fileURL = `${fileURLBase}${fileURLBase.includes("?") ? "&" : "?"}client_id=${clientID}&track_authorization=${song.track_authorization}`
-  let file = await fetch(nc2$(fileURL)).then(async res => (await res.json()).url)
+  let file = await fetchAndCache(nc2$(fileURL)).then(async res => (await res.json()).url)
   return file
 }
 

@@ -88,11 +88,11 @@ html {
 }
 
 *, button, ::-webkit-scrollbar {
-  cursor: url("/assets/figma_cursors/1.svg"), auto;
+  cursor: url("/assets/figma_cursors/cursor-black.svg"), auto;
 }
 
 a[href]:not(.button):not(button), a[href]:not(.button):not(button) * {
-  cursor: url("/assets/figma_cursors/13.svg"), pointer;
+  cursor: url("/assets/figma_cursors/cursor-click.svg"), pointer;
 }
 
 *:focus {
