@@ -37,7 +37,7 @@ export default function NavigationBar() {
     </div>
     <div id="nav-links" className={styles.list}>
       <Link onClick={close} href="/about">About</Link>
-      <Link onClick={close} href="//read.cv/aetinx" target="_blank">Resume</Link>
+      <Link onClick={close} href="//docs.google.com/document/d/1qS13o6iopwd4eMqTtBm-ZRWNvX056H4890dTgXMdzgw" target="_blank">Resume</Link>
       <Link onClick={close} href="//vgen.co/aetinx" target="_blank">Services</Link>
     </div>
     <div id="nav-socials" className={styles.socials}>
