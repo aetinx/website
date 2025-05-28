@@ -52,16 +52,61 @@ html {
   will-change: filter;
 }
 
-#alert {
+@keyframes showNotice {
+  from {
+    border: 1px solid red;
+  }
+
+  to {
+    border: 10px solid blue;
+  }
+}
+
+#alert-0 {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  animation: showAlertContainer 1s 3s cubic-bezier(.75, 0, 0.25, 1) both;
+}
+
+#alert-1 {
+  min-height: 0;
+  animation: showAlert 1s 3s cubic-bezier(.75, 0, 0.25, 1) both;
+}
+
+#alert-2 {
+  box-sizing: border-box;
   background: var(--surface-container);
   color: var(--on-surface-variant);
   padding: 0.5em 1em;
   font-size: 18px;
 }
 
-#alert > * {
+#alert-2 > * {
   max-width: 960px;
   margin: 0 auto;
+}
+
+@keyframes showAlertContainer {
+  from {
+    grid-template-rows: 0fr;
+  }
+
+  to {
+   grid-template-rows: 1fr;
+  }
+}
+
+@keyframes showAlert {
+  from {
+    visibility: hidden;
+    opacity: 1;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 @keyframes show {

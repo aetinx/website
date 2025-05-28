@@ -46,7 +46,11 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/svg+xml" href="/brand/logo.svg"/>
       </head>
       <body>
-        <div id="alert"><div>Site is still in development &mdash; sorry for any bugs!</div></div>
+        <div id="alert-0"><div id="alert-1">
+          <div id="alert-2">
+            <div>Site is still in development &mdash; sorry for any bugs!</div>
+          </div>
+        </div></div>
         <div id="body">
           <NavigationBar/>
           <Script src="/scripts/main.js" type="module" />
