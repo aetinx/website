@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
       <body>
         <div id="alert-0"><div id="alert-1">
           <div id="alert-2">
-            <div>Site is still in development &mdash; sorry for any bugs!</div>
+            <div>New website is coming soon!</div>
           </div>
         </div></div>
         <div id="body">
