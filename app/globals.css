@@ -78,7 +78,7 @@ html {
   box-sizing: border-box;
   background: var(--surface-container);
   color: var(--on-surface-variant);
-  padding: 0.5em 1em;
+  padding: 1em 48px;
   font-size: 18px;
 }
 
