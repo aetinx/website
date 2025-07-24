@@ -1,5 +1,4 @@
-import dynamic from "next/dynamic"
-const MusicPlayer = dynamic(() => import("@components/MusicPlayer"), { ssr: false })
+import MusicClientWrapper from "./MusicClientWrapper"
 //import Clock from "@components/Clock"
 
 export const metadata = {
@@ -15,7 +14,7 @@ export default function About() {
       <h1>About me</h1>
       <p className="text-[length:--font-size-body] color-(--on-surface-variant)">My name is Adrian Keim, and I’m a designer based in the snowy state of Maine. I have backgrounds in various creative fields, such as iconography, brand design, interface design, web development and vexillology. I’ve already had a little bit of experience in fields such as photography, video production, and motion design.</p>
       <main>
-        <MusicPlayer />
+        <MusicClientWrapper />
       </main>
     </>
   )
