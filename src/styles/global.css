@@ -10,7 +10,7 @@
   --font-sans--font-feature-settings: "liga" 1, "calt" 1, "ss07" on, "ss08" on, "cv01" on, "cv10" on;
   --font-sans--font-variation-settings: "opsz" 32;
   --font-sans--weight: 500;
-  --font-mono: "Iosevka", monospace;
+  --font-mono: "Iosevka Web", "Iosevka", monospace;
   --font-mono--font-feature-settings: normal;
 }
 
@@ -37,6 +37,7 @@ a, button, [role="button"], [data-hover-effect] {
     position: absolute;
     inset: calc(var(--safe-area) * -1);
     background: none;
+    pointer-events: none;
   }
 }
 
