@@ -7,11 +7,6 @@ export default function Carousel({ images }) {
   const containerRef = useRef(null)
   const itemRefs = useRef([])
   const count = images.length
-  
-  // Swipe state
-  const startX = useRef(0)
-  const scrollLeft = useRef(0)
-  const isDragging = useRef(false)
 
   useEffect(() => {
     setIsLoading(false)
@@ -37,49 +32,6 @@ export default function Carousel({ images }) {
     })
 
     return () => observer.disconnect()
-  }, [])
-
-    // Swipe events
-  useEffect(() => {
-    const slider = containerRef.current
-    if (!slider) return
-
-    const handlePointerDown = (e) => {
-      isDragging.current = true
-      startX.current = e.pageX || e.touches?.[0]?.pageX
-      scrollLeft.current = slider.scrollLeft
-    }
-
-    const handlePointerMove = (e) => {
-      if (!isDragging.current) return
-      const x = e.pageX || e.touches?.[0]?.pageX
-      const walk = (startX.current - x)
-      slider.scrollLeft = scrollLeft.current + walk
-    }
-
-    const handlePointerUp = () => {
-      isDragging.current = false
-    }
-
-    slider.addEventListener("pointerdown", handlePointerDown)
-    slider.addEventListener("pointermove", handlePointerMove)
-    slider.addEventListener("pointerup", handlePointerUp)
-    slider.addEventListener("pointerleave", handlePointerUp)
-
-    // Touch support
-    slider.addEventListener("touchstart", handlePointerDown)
-    slider.addEventListener("touchmove", handlePointerMove)
-    slider.addEventListener("touchend", handlePointerUp)
-
-    return () => {
-      slider.removeEventListener("pointerdown", handlePointerDown)
-      slider.removeEventListener("pointermove", handlePointerMove)
-      slider.removeEventListener("pointerup", handlePointerUp)
-      slider.removeEventListener("pointerleave", handlePointerUp)
-      slider.removeEventListener("touchstart", handlePointerDown)
-      slider.removeEventListener("touchmove", handlePointerMove)
-      slider.removeEventListener("touchend", handlePointerUp)
-    }
   }, [])
 
   const stacked = (
