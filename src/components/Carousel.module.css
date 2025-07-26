@@ -1,0 +1,75 @@
+.main {
+  position: relative;
+  outline: 1px solid rgba(from var(--color-white) r g b / 0.2);
+  outline-offset: -1px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.main::after {
+}
+
+.stack {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.stack > * {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  scroll-snap-align: center;
+  height: 100%;
+}
+
+.markersPositioner {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.markerGroup[data-hover-effect] {
+  --safe-area: 128px;
+  box-sizing: border-box;
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 9999px;
+  border: 1px solid rgba(from var(--color-white) r g b / 0.25);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  width: fit-content;
+  transition: cubic-bezier(1,0,0,1) 0.2s;
+  margin-bottom: 16px;
+}
+
+.markerGroup:hover {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+
+  & .marker {
+    height: 16px;
+    width: 24px;
+    border-radius: 8px;
+  }
+}
+
+.marker {
+  background: rgba(from var(--color-white) r g b / 0.2);
+  border-radius: 4px;
+  height: 8px;
+  width: 8px;
+  transition: cubic-bezier(1,0,0,1) 0.2s;
+}
+
+.marker--active {
+  background: white;
+}

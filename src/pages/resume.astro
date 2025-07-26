@@ -1,0 +1,140 @@
+---
+import { marked } from "marked"
+import "../styles/resume.css"
+import data from "../data/resume.js"
+import * as Symbols from "@latapals/symbols"
+import Meta from "./meta.astro"
+
+const metadata = {
+  title: "Resume",
+  description: "hai"
+}
+---
+
+<head>
+  <Meta {metadata} />
+</head>
+
+<div id="toolbar__container">
+  <div id="toolbar">
+    <a
+      role="button"
+      href="/"
+      class="flex items-center gap-[1em] aspect-square rounded-full px-2 py-2 hover:bg-black/5"
+    >
+      <Symbols.House />
+    </a>
+    <button
+      onclick="window.print()"
+      class="flex items-center gap-[1em] aspect-square rounded-full px-2 py-2 hover:bg-black/5"
+    >
+      <Symbols.Printer />
+    </button>
+  </div>
+</div>
+
+<body>
+  <h1 class="text-[2em] mb-[12pt] text-center">Adrian Keim</h1>
+  <div class="flex flex-wrap justify-center items-center gap-[0.75em_1.5em] mb-[32pt]">
+    <a href="//aetinx.dev" target="_blank">
+      <div class="flex items-center gap-[0.75em]">
+        <Symbols.Globe />
+        <span>aetinx.dev</span>
+      </div>
+    </a>
+    <a href="mailto:hello@aetinx.dev" target="_blank">
+      <div class="flex items-center gap-[0.75em]">
+        <Symbols.Envelope /><span>hello@aetinx.dev</span>
+      </div>
+    </a>
+    <a href="//x.com/aetinx" target="_blank">
+      <div class="flex items-center gap-[0.75em]">
+        <Symbols.BrandXcorp /><span>@aetinx</span>
+      </div>
+    </a>
+  </div>
+  <section>
+    <h2>Projects</h2>
+    <div class="section__grid">
+      {
+        data.projects.map((item) => {
+          return (
+            <div>
+              <div class="flex justify-between gap-[1em]">
+                <div class="font-bold">
+                  {item.name}
+                  {item.client && (
+                    <span class="font-medium text-neutral-500">&ensp;&bull;&ensp;</span>
+                  )}{" "}
+                  {item.client && <span class="font-medium text-neutral-500">{item.client}</span>}
+                </div>
+                <div class="text-neutral-500 shrink-0">{item.time}</div>
+              </div>
+              <div class="mt-[2pt] text-[9pt] text-neutral-500">{item.tags.join(", ")}</div>
+              <div class="mt-[8pt]" set:html={marked.parse(item.description)} />
+            </div>
+          )
+        })
+      }
+    </div>
+  </section>
+  <div class="area__columns mt-[24pt]">
+    <section>
+      <h2>Certifications</h2>
+      <div class="section__stack">
+        {
+          data.certs.map((item) => {
+            return (
+              <div>
+                <div class="flex justify-between gap-[1em]">
+                  <div class="font-bold">
+                    {item.name}
+                    <span class="font-medium"> from {item.issuer}</span>
+                  </div>
+                  <div class="text-neutral-500 shrink-0">{item.time}</div>
+                </div>
+              </div>
+            )
+          })
+        }
+      </div>
+    </section>
+    
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="section__grid">
+        {
+          data.tools.map((item) => {
+            return (
+              <p class="leading-[1.5]">
+                <b>{item.category}:</b>
+                {item.list.join(", ")}
+              </p>
+            )
+          })
+        }
+      </div>
+    </section><section>
+      <h2>Education</h2>
+      <div class="section__stack">
+        {
+          data.education.map((item) => {
+            return (
+              <div>
+                <div class="flex justify-between gap-[1em]">
+                  <div class="font-bold">
+                    {item.program}
+                    <span class="font-medium"> at {item.school}</span>
+                  </div>
+                  <div class="text-neutral-500 shrink-0">{item.time}</div>
+                </div>
+                <div class="mt-[2pt] text-[9pt] text-neutral-500">{item.location}</div>
+                {item.description && <div class="mt-[8pt]">{item.description}</div>}
+              </div>
+            )
+          })
+        }
+      </div>
+    </section>
+  </div>
+</body>

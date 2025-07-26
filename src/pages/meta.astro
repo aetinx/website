@@ -1,0 +1,35 @@
+---
+export const partial = true
+const m = Astro.props.metadata || {}
+m.description = m.description || `Adrian Keim is a designer with a passion for creating enganging experiences.`
+const title = (!!m?.title ? `${m.title}\u2002\u2013\u2002` : "") + "Adrian Keim"
+---
+
+<link rel="preconnect" href="https://rsms.me/" />
+<link rel="preload" as="style" href="https://rsms.me/inter/inter.css" />
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+
+<title>{title}</title>
+<meta name="title" content={title} />
+{m.description && <meta name="description" content={m.description} />}
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://aetinx.dev" />
+<meta property="og:title" content={title} />
+<!--<meta property="og:site_name" content={title} />-->
+{m.description && <meta property="og:description" content={m.description} />}
+<meta property="og:image" content="https://aetinx.dev/og.png" />
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://aetinx.dev" />
+<meta property="twitter:title" content={title} />
+<!--<meta property="twitter:site_name" content={title} />-->
+{m.description && <meta property="twitter:description" content={m.description} />}
+<meta property="twitter:image" content="https://aetinx.dev/og.png" />
+<meta property="twitter:site" content="aetinx" />
+
+<meta name="theme-color" content="#ff0099" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8" />
+
+<link rel="icon" type="image/svg+xml" href="/assets/brand/logo.svg" />

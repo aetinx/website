@@ -1,0 +1,18 @@
+.digitArray {
+  --dot-size: calc(
+    var(--container-width) / (var(--dot-a) + (var(--gap-a) / 4))
+  );
+  --gap-size: calc(var(--dot-size) * 1.5);
+  display: flex;
+  background-image: var(--bg);
+  background-size: calc(var(--dot-size) * 1.25);
+  height: calc((7 * var(--dot-size)) + (6 * (var(--dot-size) / 4)));
+  width: 100%;
+  gap: var(--gap-size);
+}
+
+.digit {
+  flex-shrink: 0;
+  height: calc((7 * var(--dot-size)) + (6 * (var(--dot-size) / 4)));
+  width: unset;
+}

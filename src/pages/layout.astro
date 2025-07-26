@@ -1,0 +1,33 @@
+---
+import { ClientRouter } from "astro:transitions"
+import "../styles/global.css"
+import Nav from "../components/Nav"
+import Meta from "./meta.astro"
+import SoundHandler from "../components/SoundHandler"
+
+const metadata = Astro.props.metadata || {}
+---
+
+<html lang="en">
+  <head>
+    <Meta {metadata} />
+    <ClientRouter />
+    <script is:inline>
+      document.addEventListener("astro:before-swap", e => {
+        if (e.from.href == e.to.href) {
+          e.swap = () => {}
+          e.viewTransition.skipTransition()
+        }
+      })
+    </script>
+  </head>
+  <body class="bg-asphalt text-white text-[16px] font-medium">
+    <section class="p-8 md:p-16 pb-0 md:pb-0">
+      <div class="content">
+        <SoundHandler client:load transition:persist />
+        <Nav client:load transition:persist />
+      </div>
+    </section>
+    <slot/>
+  </body>
+</html>

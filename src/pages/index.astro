@@ -1,16 +1,82 @@
 ---
+import Carousel from "../components/Carousel.jsx"
+import projects from "../data/projects.json"
+import Layout from "./layout.astro"
 
+const metadata = {
+}
+
+const allImages = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/thumbnails/*/*.{svg,png,jpg,jpeg}",
+  { eager: true }
+)
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout {metadata}>
+  <section class="px-8 py-16 md:px-16 md:py-24">
+    <div class="content">
+      <h1 class="header--large max-w-[720px] mb-6 text-balance">
+        Adrian Keim is creating magical and meaningful experiences
+      </h1>
+      <p class="body--large max-w-[720px] text-white/50 mb-12">
+        I'm a designer and developer with a passion for creating enganging experiences to be enjoyed by others.
+      </p>
+      <div class="flex gap-4 items-center flex-wrap">
+        <a
+          role="button"
+          class="button button--primary"
+          href="mailto:hello@aetinx.dev"
+          target="_blank">Connect with me</a
+        >
+        <a role="button" class="button" href="/about">Read about me</a>
+      </div>
+    </div>
+  </section>
+  <section class="px-8 py-16 md:px-16 pt-0 md:pb-32">
+    <div class="content">
+      <div class="flex flex-col gap-16 md:gap-24">
+        {
+          projects.map((item) => {
+            const images = Object.values(allImages)
+            .filter((_, keyIndex) => {
+              const keys = Object.keys(allImages)
+              return keys[keyIndex].includes(`/thumbnails/${item.key}/`)
+            })
+            return (
+              <div>
+                <Carousel client:load images={images} />
+                <div class="header--small mt-8">{item.name}</div>
+                <div class="body--medium text-white/50 mt-2">{item.description}</div>
+                <div class="flex gap-2 mt-4 flex-wrap">
+                  {item.ongoing && <div class="tag tag--primary">ongoing</div>}
+                  {item.concept && <div class="tag tag--primary">concept</div>}
+                  {item.tags.map((tag) => (
+                    <div class="tag">{tag}</div>
+                  ))}
+                </div>
+              </div>
+            )
+          })
+        }
+      </div>
+    </div>
+  </section>
+  <section class="bg-white/10 p-8 md:px-16 md:py-32">
+    <div class="content flex flex-col items-center">
+      <div class="header--medium text-[32px] text-center mb-[1.5em]">
+        Got a project in mind? Let's talk about it.
+      </div>
+      <div class="flex justify-center gap-4 items-center flex-wrap">
+        <a
+          role="button"
+          class="button button--primary"
+          href="mailto:hello@aetinx.dev"
+          target="_blank">hello@aetinx.dev</a
+        >
+        <a role="button" class="button" href="//discord.com/invite/gzUwRBDQBp" target="_blank"
+          >Talk on Discord</a
+        >
+      </div>
+    </div>
+  </section>
+</Layout>

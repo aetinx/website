@@ -1,5 +1,25 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config"
+import { fileURLToPath, URL } from "node:url"
+import tailwindcss from "@tailwindcss/vite"
 
-// https://astro.build/config
-export default defineConfig({});
+import react from "@astrojs/react"
+
+export default defineConfig({
+  site: "https://aetinx.dev",
+  vite: {
+    plugins: [tailwindcss()],
+    resolve: {
+      alias: {
+        "@assets": fileURLToPath(new URL("./src/assets", import.meta.url))
+      }
+    }
+  },
+  integrations: [
+    react({
+      experimentalReactChildren: true
+    })
+  ],
+  server: {
+    allowedHosts: true
+  }
+})

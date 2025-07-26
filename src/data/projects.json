@@ -1,0 +1,59 @@
+[
+  {
+    "key": "weeby-stitches",
+    "name": "Weeby Stitches",
+    "description": "Online indie storefront for anime-inspired apparel and accessories.",
+    "tags": ["logomark", "wordmark", "visual identity"]
+  },
+  {
+    "key": "flags",
+    "name": "Latapals Flags",
+    "description": "An extensive set of around 550 flags of nations, micronations, languages, ideologies, and more.",
+    "tags": ["graphics", "web"],
+    "ongoing": true
+  },
+  {
+    "key": "symbols",
+    "name": "Latapals Symbols",
+    "description": "An open-source icon library with over 600 symbols.",
+    "tags": ["graphics", "web"],
+    "ongoing": true
+  },
+  {
+    "key": "ark-heat",
+    "name": "ARK Heat",
+    "description": "Custom type for my personal brand.",
+    "tags": ["typography"],
+    "ongoing": true
+  },
+  {
+    "key": "archial",
+    "name": "Archial",
+    "description": "App for saving and organizing reference media.",
+    "tags": ["product", "software", "web"],
+    "ongoing": true
+  },
+  {
+    "key": "familiar",
+    "name": "Familiar Design System",
+    "description": "Simple design system and component library.",
+    "tags": ["product", "systems", "web"],
+    "ongoing": true
+  },
+  {
+    "key": "motomania",
+    "name": "Motomania",
+    "description": "Racing game concept for the modern era, inspired by hits from the 2000s.",
+    "tags": ["interface", "wordmark"],
+    "ongoing": true,
+    "concept": true
+  },
+  {
+    "key": "ncs22-ccs",
+    "name": "NCS22 Custom Car Set",
+    "description": "Custom car set for the NCS22 mod on NASCAR Racing 2003 Season.",
+    "tags": ["liveries"],
+    "ongoing": true,
+    "concept": true
+  }
+]

@@ -1,0 +1,128 @@
+---
+import * as Symbols from "@latapals/symbols"
+import Layout from "./layout.astro"
+import DotClock from "../components/DotClock.jsx"
+
+const metadata = {
+  title: "About"
+}
+
+const data = [
+  {
+    icon: Symbols.Apps,
+    title: "Software",
+    body: `Blender, Figma, Framer, Unreal Engine, VS Code, WinMip2`
+  },
+  {
+    icon: Symbols.Puzzle,
+    title: "Development tools",
+    body: `Astro, CSS, Electron, Eleventy, HTML, JavaScript, JSX, Next.js, Nunjucks, React, Sass, Strapi, TypeScript, Vite`
+  }
+]
+
+const network = [
+  {
+    name: "Gleb Sabirzyanov",
+    url: "https://gleb.sexy"
+  },
+  {
+    name: "Gabriel Foulon",
+    url: "https://x.com/GabFoulon"
+  },
+  {
+    name: "Jace (@JaceThings)",
+    url: "https://ja.mt"
+  },
+  {
+    name: "Liam Fennell",
+    url: "https://fennell.cv"
+  },
+  {
+    name: "Ana Howard",
+    url: "https://ana.sh"
+  },
+  {
+    name: "Ryan Senior",
+    url: "https://yasen.design"
+  },
+  {
+    name: "Dany (@danywander)",
+    url: "https://x.com/danywander"
+  },
+  {
+    name: "Henor Kelmendi",
+    url: "https://henor.is/"
+  },
+  {
+    name: "Yasoku Publishing",
+    url: "https://yasoku.us/"
+  },
+  {
+    name: "Lucia Scarlet",
+    url: "https://x.com/luciascarlet"
+  },
+  {
+    name: "Celeste (@vmfunc)",
+    url: "https://github.com/vmfunc"
+  }
+]
+---
+
+<Layout {metadata}>
+  <section class="px-8 py-16 md:px-16 md:py-24">
+    <div class="content mb-0 md:mb-24">
+      <h1 class="header--large max-w-[720px] mb-6">About me</h1>
+      <p class="body--large max-w-[720px] text-white/50 mb-8">
+        My name is Adrian Keim, and I'm a designer with experience in a wide variety of design
+        fields. I'm most experienced in brand design, product design, lettering, iconography, and web
+        development. I also happen to have experience in other areas, such as livery design, photography,
+        photo editing, video production and motion design.
+      </p>
+    </div>
+    <div class="content flex flex-col gap-16 md:gap-24">
+      <DotClock client:load />
+      {
+        data.map((item) => {
+          const Icon = item.icon
+          return (
+            <div>
+              <div
+                class="header--small flex gap-[0.75em]"
+                style="color: color-mix(in srgb, var(--color-asphalt), var(--color-white))"
+              >
+                <Icon />
+                {item.title}
+              </div>
+              <p class="body--xlarge mt-4 md:mt-8">{item.body}</p>
+            </div>
+          )
+        })
+      }
+      <div>
+        <div
+          class="header--small flex gap-[0.75em]"
+          style="color: color-mix(in srgb, var(--color-asphalt), var(--color-white))"
+        >
+          <Symbols.People />
+          Network
+        </div>
+        <p class="body--xlarge mt-4 md:mt-8 flex flex-wrap gap-x-2">
+          {
+            network.map((person, index) => (
+              <a
+                href={person.url}
+                target="_blank"
+                class="inline-block whitespace-nowrap after:content-[','] last:after:content-['']"
+                style={
+                  {
+                    "--safe-area": "0px"
+                  }
+                }
+              ><!-- -->{person.name.trim()}<!-- --></a>
+            ))
+          }
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

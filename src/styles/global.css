@@ -1,0 +1,197 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/Iosevka/6.0.0/iosevka/iosevka.min.css");
+@import "tailwindcss";
+
+@theme {
+  --color-*: initial;
+  --color-asphalt: #0b0b0e;
+  --color-pink: #f09;
+  --color-white: white;
+  --font-sans: InterVariable, Inter Variable, Inter, sans-serif;
+  --font-sans--font-feature-settings: "liga" 1, "calt" 1, "ss07" on, "ss08" on, "cv01" on, "cv10" on;
+  --font-sans--font-variation-settings: "opsz" 32;
+  --font-sans--weight: 500;
+  --font-mono: "Iosevka", monospace;
+  --font-mono--font-feature-settings: normal;
+}
+
+:root, html, body, * {
+  scrollbar-color: color-mix(in oklab, var(--color-white) 50%, var(--color-asphalt)) color-mix(in oklab, var(--color-white) 20%, var(--color-asphalt));
+}
+
+body {
+  overflow: hidden scroll;
+  overscroll-behavior-y: none;
+}
+
+body, button, [role="button"], ::-webkit-scrollbar {
+  cursor: url("@assets/figma_cursors/cursor-black.svg"), default;
+}
+
+a, button, [role="button"], [data-hover-effect] {
+  --safe-area: 8px;
+
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: calc(var(--safe-area) * -1);
+    background: none;
+  }
+}
+
+a[href] {
+  cursor: url("@assets/figma_cursors/cursor-click.svg"), pointer;
+}
+
+.label--large {
+  font-size: 1.5em;
+  line-height: 100%;
+  font-weight: 500;
+}
+
+.label--medium {
+  font-size: 1.25em;
+  line-height: 100%;
+  font-weight: 500;
+}
+
+.label--small {
+  font-size: 1em;
+  line-height: 100%;
+  font-weight: 500;
+}
+
+.header--large {
+  font-size: 3em;
+  line-height: 110%;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.header--medium {
+  font-size: 2em;
+  line-height: 110%;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.header--small {
+  font-size: 1.5em;
+  line-height: 110%;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.body--xlarge {
+  font-size: 2em;
+  line-height: 150%;
+  font-weight: 500;
+}
+
+.body--large {
+  font-size: 1.5em;
+  line-height: 150%;
+  font-weight: 500;
+}
+
+.body--medium {
+  font-size: 1.25em;
+  line-height: 150%;
+  font-weight: 500;
+}
+
+.body--small {
+  font-size: 1em;
+  line-height: 150%;
+  font-weight: 500;
+}
+
+@media (width <= 48rem) {
+  .header--small {
+    font-size: 1.25em
+  }
+
+  .header--medium {
+    font-size: 1.5em;
+  }
+
+  .header--large {
+    font-size: 1.75em;
+  }
+
+  .body--medium {
+    font-size: 1em;
+  }
+
+  .body--large {
+    font-size: 1.125em;
+  }
+
+  .body--xlarge {
+    font-size: 1.25em;
+  }
+}
+
+.content {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  @mixin label--medium;
+  --button-background: color-mix(in oklab, var(--color-white) 20%, var(--color-asphalt));
+  --button-shade-amount: 0.25;
+  --_bg: var(--button-background);
+  --_sa: var(--button-shade-amount);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 16px;
+  gap: 12px;
+  border-radius: 9999px;
+  border: 1px solid var(--_bg);
+  background: var(--_bg);  
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
+  color: var(--color-white);
+  text-shadow: 0px 1px 2px rgba(from var(--color-asphalt) r g b / 0.5), 0px 0px 8px rgba(from var(--color-asphalt) r g b / 0.5);
+  user-select: none;
+  
+  &:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, var(--_sa)) 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 9999px;
+    transition: 0.25s;
+  }
+  
+  &:hover:after {
+    opacity: 0.75;
+  }
+  
+  &:active {
+    background: var(--_bg);
+    box-shadow: 0px 4px 8px 0px rgba(from var(--color-asphalt) r g b / 0.5) inset;
+  }
+}
+
+.button--primary {
+  --button-background: var(--color-pink);
+  --button-shade-amount: 0.5;
+}
+
+.tag {
+  @apply box-border inline-flex px-2 items-center h-[22px] rounded-[8px] font-mono font-bold tracking-[0.04em] text-[14px]/[100%] uppercase;
+}
+
+.tag:not(.tag--primary) {
+  @apply text-white/50 border-[1.5px];
+}
+
+.tag--primary {
+  @apply bg-white/50 text-asphalt;
+}
