@@ -17,7 +17,7 @@ export default {
     },
     */
     {
-      name: "ARK Heat & Ark Enduro",
+      name: "ARK Heat & ARK Enduro",
       time: "Ongoing",
       tags: ["typography"],
       description: "Custom proprietary type created for my own personal projects and brand."
