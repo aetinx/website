@@ -7,7 +7,8 @@ import Meta from "./meta.astro"
 
 const metadata = {
   title: "Resume",
-  description: "This is my wonderful resume, generated using Astro and Tailwind instead of a word processor."
+  description:
+    "This is my wonderful resume, generated using Astro and Tailwind instead of a word processor."
 }
 ---
 
@@ -53,6 +54,7 @@ const metadata = {
       </div>
     </a>
   </div>
+
   <section>
     <h2>Projects</h2>
     <div class="section__grid">
@@ -78,6 +80,7 @@ const metadata = {
       }
     </div>
   </section>
+
   <div class="area__columns mt-[24pt]">
     <section>
       <h2>Certifications</h2>
@@ -99,7 +102,7 @@ const metadata = {
         }
       </div>
     </section>
-    
+
     <section>
       <h2>Technical Skills</h2>
       <div class="section__grid">
@@ -114,7 +117,9 @@ const metadata = {
           })
         }
       </div>
-    </section><section>
+    </section>
+
+    <section>
       <h2>Education</h2>
       <div class="section__stack">
         {
@@ -130,6 +135,30 @@ const metadata = {
                 </div>
                 <div class="mt-[2pt] text-[9pt] text-neutral-500">{item.location}</div>
                 {item.description && <div class="mt-[8pt]">{item.description}</div>}
+              </div>
+            )
+          })
+        }
+      </div>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <div class="section__stack section--min">
+        {
+          data.features.map((item: { issuer: string; time: string; name?: string }) => {
+            return (
+              <div>
+                <div class="flex justify-between gap-[1em]">
+                  <div class="font-bold">
+                    {item.issuer}
+                    {item.name && (
+                      <span class="font-medium text-neutral-500">&ensp;&bull;&ensp;</span>
+                    )}{" "}
+                    {item.name && <span class="font-medium text-neutral-500">{item.name}</span>}
+                  </div>
+                  <div class="text-neutral-500 shrink-0">{item.time}</div>
+                </div>
               </div>
             )
           })

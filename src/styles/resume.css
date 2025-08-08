@@ -70,6 +70,10 @@ section {
   grid-gap: 16pt;
 }
 
+.section--min {
+  grid-gap: 8pt;
+}
+
 .monospace {
   font-family: Iosevka;
   font-feature-settings: normal;

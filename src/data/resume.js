@@ -42,7 +42,7 @@ export default {
       //client: "Latapals",
       time: "2023",
       tags: ["graphics", "web"],
-      description: "An open-source 16×16 icon set and React library with over 600 symbols."
+      description: "An open\u2011source 16×16 icon set and React library with over 600 symbols."
     }
   ],
   certs: [
@@ -53,22 +53,28 @@ export default {
     },
     {
       name: "CTE Broadcast & Multimedia Production (High Honors)",
-      issuer: "Mid-Maine Technical Center",
+      issuer: "Mid\u2011Maine Technical Center",
       time: "2024"
+    }
+  ],
+  features: [
+    {
+      issuer: "Headers Club",
+      time: "Aug 2025"
     }
   ],
   education: [
     {
       school: "Eastern Maine Community College",
       program: "Digital Graphic Design",
-      location: "Bangor, US-ME",
+      location: "Bangor, US\u2011ME",
       time: "2024 – 2026",
       description: "Studying Adobe software, technical writing skills, marketing, and more."
     },
     {
-      school: "Mid-Maine Technical Center",
+      school: "Mid\u2011Maine Technical Center",
       program: "Mass Media Communications",
-      location: "Waterville, US-ME",
+      location: "Waterville, US\u2011ME",
       time: "2023 – 2024",
       description: "Studied photography, video production, photo editing, and motion design."
     }
