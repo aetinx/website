@@ -60,6 +60,7 @@ export default {
   features: [
     {
       issuer: "Headers Club",
+      link: "https://headers.club/",
       time: "Aug 2025"
     }
   ],
@@ -115,18 +116,6 @@ export default {
         "Nunjucks",
         "Vite"
       ]
-    }
-  ],
-  contact: [
-    {
-      name: "X (Twitter)",
-      username: "@aetinx",
-      link: "//x.com/aetinx"
-    },
-    {
-      name: "Email",
-      username: "hello@aetinx.dev",
-      link: "mailto:hello@aetinx.dev"
     }
   ]
 }

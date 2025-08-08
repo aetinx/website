@@ -61,7 +61,7 @@ const metadata = {
       {
         data.projects.map((item) => {
           return (
-            <div>
+            <article>
               <div class="flex justify-between gap-[1em]">
                 <div class="font-bold">
                   {item.name}
@@ -74,7 +74,7 @@ const metadata = {
               </div>
               <div class="mt-[2pt] text-[9pt] text-neutral-500">{item.tags.join(", ")}</div>
               <div class="mt-[8pt]" set:html={marked.parse(item.description)} />
-            </div>
+            </article>
           )
         })
       }
@@ -88,7 +88,7 @@ const metadata = {
         {
           data.certs.map((item) => {
             return (
-              <div>
+              <article>
                 <div class="flex justify-between gap-[1em]">
                   <div class="font-bold">
                     {item.name}
@@ -96,7 +96,7 @@ const metadata = {
                   </div>
                   <div class="text-neutral-500 shrink-0">{item.time}</div>
                 </div>
-              </div>
+              </article>
             )
           })
         }
@@ -109,10 +109,12 @@ const metadata = {
         {
           data.tools.map((item) => {
             return (
-              <p class="leading-[1.5]">
-                <b>{item.category}:</b>
-                {item.list.join(", ")}
-              </p>
+              <article>
+                <p class="leading-[1.5]">
+                  <b>{item.category}:</b>
+                  {item.list.join(", ")}
+                </p>
+              </article>
             )
           })
         }
@@ -125,7 +127,7 @@ const metadata = {
         {
           data.education.map((item) => {
             return (
-              <div>
+              <article>
                 <div class="flex justify-between gap-[1em]">
                   <div class="font-bold">
                     {item.program}
@@ -135,7 +137,7 @@ const metadata = {
                 </div>
                 <div class="mt-[2pt] text-[9pt] text-neutral-500">{item.location}</div>
                 {item.description && <div class="mt-[8pt]">{item.description}</div>}
-              </div>
+              </article>
             )
           })
         }
@@ -146,22 +148,24 @@ const metadata = {
       <h2>Features</h2>
       <div class="section__stack section--min">
         {
-          data.features.map((item: { issuer: string; time: string; name?: string }) => {
-            return (
-              <div>
-                <div class="flex justify-between gap-[1em]">
-                  <div class="font-bold">
-                    {item.issuer}
-                    {item.name && (
-                      <span class="font-medium text-neutral-500">&ensp;&bull;&ensp;</span>
-                    )}{" "}
-                    {item.name && <span class="font-medium text-neutral-500">{item.name}</span>}
+          data.features.map(
+            (item: { issuer: string; time: string; name?: string; link?: string }) => {
+              return (
+                <article>
+                  <div class="flex justify-between gap-[1em]">
+                    <a class="font-bold" href={item.link} target="_blank">
+                      {item.issuer}
+                      {item.name && (
+                        <span class="font-medium text-neutral-500">&ensp;&bull;&ensp;</span>
+                      )}{" "}
+                      {item.name && <span class="font-medium text-neutral-500">{item.name}</span>}
+                    </a>
+                    <div class="text-neutral-500 shrink-0">{item.time}</div>
                   </div>
-                  <div class="text-neutral-500 shrink-0">{item.time}</div>
-                </div>
-              </div>
-            )
-          })
+                </article>
+              )
+            }
+          )
         }
       </div>
     </section>
