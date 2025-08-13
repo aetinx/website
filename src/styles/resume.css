@@ -185,7 +185,7 @@ section {
 }
 
 .monospace {
-  font-family: Iosevka;
+  font-family: "Iosevka Web", "Iosevka", monospace;
   font-feature-settings: normal;
   text-transform: uppercase;
 }
