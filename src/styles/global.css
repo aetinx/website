@@ -1,4 +1,4 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/Iosevka/6.0.0/iosevka/iosevka.min.css");
+@import url("@assets/styles/iosevka.css");
 @import "tailwindcss";
 
 @theme {
@@ -10,8 +10,8 @@
   --font-sans--font-feature-settings: "liga" 1, "calt" 1, "ss07" on, "ss08" on, "cv01" on, "cv10" on;
   --font-sans--font-variation-settings: "opsz" 32;
   --font-sans--weight: 500;
-  --font-mono: "Iosevka Web", "Iosevka", monospace;
-  --font-mono--font-feature-settings: normal;
+  --font-mono: "Iosevka", monospace;
+  --font-mono--font-feature-settings: var(--aet-iosevka-ffs);
 }
 
 :root, html, body, * {

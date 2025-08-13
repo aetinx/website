@@ -1,5 +1,104 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/Iosevka/6.0.0/iosevka/iosevka.min.css");
+@import url("@assets/styles/iosevka.css");
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Univers LT Pro';
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_55_roman.4020960013f9.woff2") format('woff2'),url("https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_55_roman.64e8aedbcdb8.woff") format('woff');
+  font-display: block
+}
+
+@font-face {
+  font-family: 'Univers LT Pro';
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_55_oblique.661461ea858b.woff2") format('woff2'),url("https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_55_oblique.3eec7fb39fcf.woff") format('woff');
+  font-display: block
+}
+
+@font-face {
+  font-family: 'Univers LT Pro';
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_65_bold.3e0bae4c4341.woff2") format('woff2'),url("https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_65_bold.51ddc9130aaa.woff") format('woff');
+  font-display: block
+}
+
+@font-face {
+  font-family: 'Univers LT Pro';
+  font-weight: 700;
+  font-style: italic;
+  src: url("https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_65_bold_oblique.69a449493509.woff2") format('woff2'),url("https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_65_bold_oblique.44d4c7e5d819.woff") format('woff');
+  font-display: block
+}
+
+@font-face {
+  font-family: 'Univers LT Pro';
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: condensed;
+  src: url("https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_57_condensed.9b7813ee98f5.woff2") format('woff2'),url("https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_57_condensed.b507db6a73cb.woff") format('woff');
+  font-display: block
+}
+
+@font-face {
+  font-family: 'Univers LT Pro';
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: condensed;
+  src: url("https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_67_bold_condensed.0f0f0b325220.woff2") format('woff2'),url("https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_67_bold_condensed.889bc57cf17b.woff") format('woff');
+  font-display: block
+}
+
+@font-face {
+  font-family: 'Univers LT Pro';
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: condensed;
+  src: url("https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_57_condensed_oblique.ae4b161e8fec.woff2") format('woff2'),url("https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_57_condensed_oblique.0fcab45d4b6f.woff") format('woff');
+  font-display: block
+}
+
+@font-face {
+  font-family: 'Univers LT Pro';
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: condensed;
+  src: url("https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_67_bold_condensed_oblique.8db9150b5bba.woff2") format('woff2'),url("https://usgraphics.com/static/core/css/fonts/univers/univers_lt_pro_67_bold_condensed_oblique.e51d74994415.woff") format('woff');
+  font-display: block
+}
+
+@font-face {
+  font-family: TX-02-Data;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("https://usgraphics.com/static/core/css/fonts/TX-02-Data/TX-02-Data-Regular.09ec0d8a5811.woff2") format('woff2');
+  font-display: block
+}
+
+@font-face {
+  font-family: TX-02-Data;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("https://usgraphics.com/static/core/css/fonts/TX-02-Data/TX-02-Data-Bold.17ffdda91017.woff2") format('woff2');
+  font-display: block
+}
+
+@font-face {
+  font-family: 'Berkeley Arrow';
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("https://usgraphics.com/static/core/css/fonts/berkeley-mono-data/BerkeleyArrow-Regular.5d4ca08d92bd.woff2") format('woff2'),url("https://usgraphics.com/static/core/css/fonts/berkeley-mono-data/BerkeleyArrow-Regular.7674a172994e.woff") format('woff'),url("https://usgraphics.com/static/core/css/fonts/berkeley-mono-data/BerkeleyArrow-Regular.14ce77505f9a.ttf") format('truetype');
+  font-display: block;
+  unicode-range: U+2192
+}
 
 html {
   display: flex;
@@ -17,7 +116,7 @@ body {
   font-variation-settings: "opsz" 32;
   letter-spacing: 0.01em;
   font-weight: 500;
-  line-height: 1.15;
+  line-height: 1.4;
   font-size: 10pt;
   page-break-inside: avoid;
   background: white;
