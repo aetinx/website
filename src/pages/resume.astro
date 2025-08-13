@@ -150,12 +150,7 @@ const metadata = {
                 <article>
                   <div class="flex justify-between gap-[1em]">
                     <a class="font-bold" href={item.link} target="_blank">
-                      {item.issuer}
-                      {item.name && (
-                        <span class="font-medium text-neutral-500">&ensp;&bull;&ensp;</span>
-                      )}{" "}
-                      {item.name && <span class="font-medium text-neutral-500">{item.name}</span>}
-                    </a>
+                      {item.issuer}<!-- -->{item.name && <span class="font-medium">, {item.name}</span>}<!-- --></a>
                     <div class="text-neutral-500 shrink-0">{item.time}</div>
                   </div>
                 </article>
