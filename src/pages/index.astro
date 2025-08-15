@@ -2,13 +2,24 @@
 import Carousel from "../components/Carousel.jsx"
 import projects from "../data/projects.json"
 import Layout from "./layout.astro"
+import { getImage } from "astro:assets"
 
-const metadata = {
-}
+const metadata = {}
 
 const allImages = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/thumbnails/*/*.{svg,png,jpg,jpeg}",
   { eager: true }
+)
+const allOptImages = await Promise.all(
+  Object.entries(allImages).map(async ([key, val]) => {
+    const result = await getImage({
+      src: val.default,
+      format: "webp",
+      width: 960,
+      widths: [960 * 0.25, 960 * 0.5, 960 * 0.75, 960, val.default.width]
+    })
+    return { name: key, result }
+  })
 )
 ---
 
@@ -19,7 +30,8 @@ const allImages = import.meta.glob<{ default: ImageMetadata }>(
         Adrian Keim is creating magical and meaningful experiences
       </h1>
       <p class="body--large max-w-[720px] text-white/50 mb-12">
-        I'm a designer and developer with a passion for bringing brilliant ideas to life, and solving problems with thoughtful design.
+        I'm a designer and developer with a passion for bringing brilliant ideas to life, and
+        solving problems with thoughtful design.
       </p>
       <div class="flex gap-4 items-center flex-wrap">
         <a
@@ -37,11 +49,9 @@ const allImages = import.meta.glob<{ default: ImageMetadata }>(
       <div class="flex flex-col gap-16 md:gap-24">
         {
           projects.map((item) => {
-            const images = Object.values(allImages)
-            .filter((_, keyIndex) => {
-              const keys = Object.keys(allImages)
-              return keys[keyIndex].includes(`/thumbnails/${item.key}/`)
-            })
+            const images = allOptImages.filter((x) =>
+              decodeURIComponent(x.name).includes(`/thumbnails/${item.key}/`)
+            ).map(x => x.result)
             return (
               <div>
                 <Carousel client:load images={images} />

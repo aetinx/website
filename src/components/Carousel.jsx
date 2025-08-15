@@ -38,7 +38,7 @@ export default function Carousel({ images }) {
     <div className={styles.stack} ref={containerRef}>
       {images.map((image, i) => (
         <div key={i} ref={(el) => (itemRefs.current[i] = el)} className={styles.itemWrapper}>
-          <img className="aspect-16/9 object-cover h-full" src={image.default.src} />
+          <img className="aspect-16/9 object-cover h-full" src={image.src} srcSet={image.srcSet.attribute} />
         </div>
       ))}
     </div>

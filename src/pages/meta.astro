@@ -1,13 +1,23 @@
 ---
 export const partial = true
 const m = Astro.props.metadata || {}
-m.description = m.description || `Adrian Keim is a designer with a passion for creating magical and meaningful experiences.`
+m.description =
+  m.description ||
+  `Adrian Keim is a designer with a passion for creating magical and meaningful experiences.`
 const title = (!!m?.title ? `${m.title}\u2002\u2013\u2002` : "") + "Adrian Keim"
 ---
 
 <link rel="preconnect" href="https://rsms.me/" />
 <link rel="preload" as="style" href="https://rsms.me/inter/inter.css" />
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+<link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  href="https://rsms.me/inter/font-files/InterVariable.woff2?v=4.1"
+  crossorigin
+  fetchpriority="high"
+/>
 
 <title>{title}</title>
 <meta name="title" content={title} />
