@@ -15,8 +15,7 @@ const allOptImages = await Promise.all(
     const result = await getImage({
       src: val.default,
       format: "webp",
-      width: 960,
-      widths: [960 * 0.25, 960 * 0.5, 960 * 0.75, 960, 1920]
+      widths: [960 * 0.25, 960 * 0.5, 960 * 0.75, 960, 1024, 1024 * 2]
     })
     return { name: key, result }
   })
