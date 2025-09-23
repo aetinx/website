@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
+    "@astrojs/sitemap": "^3.6.0",
     "@latapals/symbols": "^0.0.9",
     "@tailwindcss/vite": "^4.1.11",
     "@types/react": "^19.1.8",
