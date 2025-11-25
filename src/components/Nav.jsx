@@ -81,8 +81,12 @@ export default function Nav() {
           open ? "" : "hidden"
         } flex flex-col flex-1 gap-4 text-[2em]/[1em] w-full text-white/50 md:flex md:text-[1em] md:flex-row md:justify-end md:gap-8`}
       >
-        <a onClick={close} href="/">Home</a>
-        <a onClick={close} href="/about">About</a>
+        <a onClick={close} href="/">
+          Home
+        </a>
+        <a onClick={close} href="/about">
+          About
+        </a>
         <a onClick={close} href="/resume" target="_blank">
           Resume
         </a>
@@ -95,7 +99,12 @@ export default function Nav() {
         <a onClick={close} href="//x.com/aetinx" target="_blank" aria-label="X/Twitter profile">
           <Symbols.BrandXcorp />
         </a>
-        <a onClick={close} href="//discord.com/invite/gzUwRBDQBp" target="_blank" aria-label="Discord server">
+        <a
+          onClick={close}
+          href="//discord.com/invite/Xwp7enga7c"
+          target="_blank"
+          aria-label="Discord server"
+        >
           <Symbols.BrandDiscord />
         </a>
         <a onClick={close} href="//github.com/aetinx" target="_blank" aria-label="GitHub profile">
@@ -127,7 +136,7 @@ export default function Nav() {
         <a href="//x.com/aetinx" target="_blank">
           <Symbols.BrandXcorp />
         </a>
-        <a href="//discord.com/invite/gzUwRBDQBp" target="_blank">
+        <a href="//discord.com/invite/Xwp7enga7c" target="_blank">
           <Symbols.BrandDiscord />
         </a>
         <a href="//github.com/aetinx" target="_blank">
