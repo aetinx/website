@@ -1,5 +1,12 @@
 [
   {
+    "key": "archial",
+    "name": "Archial",
+    "description": "App for saving and organizing reference media.",
+    "tags": ["logomark", "wordmark", "product", "software", "web"],
+    "ongoing": true
+  },
+  {
     "key": "weeby-stitches",
     "name": "Weeby Stitches",
     "description": "Online indie storefront for anime-inspired apparel and accessories.",
@@ -24,13 +31,6 @@
     "name": "ARK Heat",
     "description": "Custom type for my personal brand.",
     "tags": ["typography"],
-    "ongoing": true
-  },
-  {
-    "key": "archial",
-    "name": "Archial",
-    "description": "App for saving and organizing reference media.",
-    "tags": ["product", "software", "web"],
     "ongoing": true
   },
   {
