@@ -1,5 +1,12 @@
 [
   {
+    "key": "yasoku",
+    "name": "Yasoku",
+    "description": "Anime and automotive media publishing company in Phoenix, Arizona",
+    "tags": ["logomark", "wordmark", "visual identity", "graphics", "web"],
+    "ongoing": true
+  },
+  {
     "key": "archial",
     "name": "Archial",
     "description": "App for saving and organizing reference media.",
