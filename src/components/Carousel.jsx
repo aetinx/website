@@ -30,7 +30,7 @@ export default function Carousel({ images }) {
   const slides = (
     <div
       ref={containerRef}
-      className="bg-metal-100 aspect-video flex w-full overflow-x-scroll overflow-y snap-x snap-mandatory scrollbar-none"
+      className="bg-metal-100 aspect-video flex w-full overflow-x-scroll overflow-y snap-x snap-mandatory scrollbar-none select-none"
       tabIndex="-1"
     >
       {images.map((x, i) => {

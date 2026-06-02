@@ -13,10 +13,6 @@ export default function Navbar() {
   const buttonRef = useRef(null)
 
   useEffect(() => {
-    console.log("Navbar has been mounted")
-  }, [])
-
-  useEffect(() => {
     const handleClick = e => {
       if (!isOpen) return
 

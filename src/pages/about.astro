@@ -45,7 +45,7 @@ import about from "../data/about"
                 <li>
                   <article class="grid grid-cols-[1fr_2fr] max-md:flex max-md:flex-col">
                     <time class="text-metal-500">{x.year}</time>
-                    <div class="flex flex-col">
+                    <div class="flex flex-col items-start">
                       <a href={x.url} target="_blank" class={x.url && "underline"}>
                         {x.issuer}
                       </a>
@@ -64,7 +64,7 @@ import about from "../data/about"
                 <li>
                   <article class="grid grid-cols-[1fr_2fr] max-md:flex max-md:flex-col">
                     <time class="text-metal-500">{x.years.from === x.years.to ? x.years.from : `${x.years.from}–${x.years.to}`}</time>
-                    <div class="flex flex-col">
+                    <div class="flex flex-col items-start">
                       <span>{x.school}</span>
                       <span class="text-metal-500">{x.study}</span>
                     </div>
@@ -125,8 +125,11 @@ import about from "../data/about"
                 <li><a href="https://tints.dev/" target="_blank" class="underline">tints.dev</a></li>
                 <li><a href="https://developer.chrome.com/docs/lighthouse" target="_blank" class="underline">Lighthouse</a></li>
                 <li><a href="https://ahrefs.com/seo-toolbar" target="_blank" class="underline">Ahrefs SEO Toolbar</a></li>
+                <li><a href="https://search.google.com/test/rich-results" target="_blank">Rich Results Test</a></li>
+                <li><a href="https://validator.schema.org/" target="_blank">Schema Markup Validator</a></li>
               </ul>
             </div>
+            <p>As well as classic SEO (search engine optimization), this site is also optimized for AEO (answer engine optimization). This website makes use of JSON-LD structured data.</p>
           </div>
         </AboutSection>
       </div>

@@ -86,11 +86,7 @@ const projects: Record<string, Project> = {
       {
         url: "legacy-0.png",
         alt: "Preview of symbols from a legacy icon set.",
-      },
-      {
-        url: "legacy-1.png",
-        alt: "Preview of symbols from a legacy icon set.",
-      },
+      }
     ],
     tags: ["graphics", "iconography", "web"],
     ongoing: true,

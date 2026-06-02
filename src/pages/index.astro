@@ -5,24 +5,37 @@ import projects from "../data/projects"
 import { getImage } from "astro:assets"
 import Carousel from "../components/Carousel"
 
-const importedThumbnails = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/thumbnails/*/*.{svg,png,jpg,jpeg}",
-  { eager: true }
-)
+const importedThumbnails = import.meta.glob<{ default: ImageMetadata }>("/src/assets/thumbnails/*/*.{svg,png,jpg,jpeg}", { eager: true })
 
 const optimizedThumbnails = await Promise.all(
   Object.entries(importedThumbnails).map(async ([key, val]) => {
     const result = await getImage({
       src: val.default,
       format: "webp",
-      widths: [... new Set([val.default.width, 640, 768, 1024, 1280, 1920, 2048, 3840])].sort((a, b) => a - b).filter(w => w <= val.default.width)
+      widths: [...new Set([val.default.width, 640, 768, 1024, 1280, 1920, 2048, 3840])]
+        .sort((a, b) => a - b)
+        .filter(w => w <= val.default.width)
     })
     return { name: key, result }
   })
 )
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: Object.values(projects).map((project, index) => ({
+    "@type": "CreativeWork",
+    position: index + 1,
+    name: project.name,
+    description: project.desc,
+    keywords: project.tags
+  }))
+}
 ---
 
 <Layout>
+  <script type="application/ld+json" set:html={JSON.stringify(schema, null, 2)} is:inline />
+
   <Section>
     <section class="my-24 md:my-32 max-w-120 md:max-w-160">
       <header class="h1">
@@ -53,17 +66,17 @@ const optimizedThumbnails = await Promise.all(
             <div>
               <Carousel
                 client:load
-                images={(value.thumbnails ?? []).map((x) => ({
-                  image: Object.fromEntries(
-                    optimizedThumbnails.map(({ name, result }) => [name, result])
-                  )[`/src/assets/thumbnails/${key}/${x.url}`],
+                images={(value.thumbnails ?? []).map(x => ({
+                  image: Object.fromEntries(optimizedThumbnails.map(({ name, result }) => [name, result]))[
+                    `/src/assets/thumbnails/${key}/${x.url}`
+                  ],
                   alt: x.alt
                 }))}
               />
               <div class="max-w-2xl">
                 <div class="font-semibold text-xl mt-6 leading-[125%] text-pretty">
-                  <div>{value.name ?? (<mark>A name needs to be set!</mark>)}</div>
-                  <div class="text-metal-500 mt-1">{value.desc ?? (<mark>A description needs to be set!</mark>)}</div>
+                  <div>{value.name ?? <mark>A name needs to be set!</mark>}</div>
+                  <div class="text-metal-500 mt-1">{value.desc ?? <mark>A description needs to be set!</mark>}</div>
                 </div>
               </div>
               <div class="flex flex-wrap gap-2 mt-4">
@@ -79,7 +92,7 @@ const optimizedThumbnails = await Promise.all(
                 )}
                 {(value.tags ?? [])
                   .sort((a, b) => a.localeCompare(b))
-                  .map((x) => (
+                  .map(x => (
                     <div class="flex items-center h-5 px-2 text-xs font-semibold uppercase tracking-widest rounded-sm border-[1.25px] border-metal-500 text-metal-500">
                       {x}
                     </div>

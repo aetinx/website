@@ -50,6 +50,12 @@ const profile: Profile = {
       title: "Featured header: x.com/aetinx",
       year: "2025",
       url: "https://headers.club/"
+    },
+    {
+      issuer: "Astro Weekly",
+      title: "Astro Weekly #101",
+      year: "2025",
+      url: "https://newsletter.astroweekly.dev/p/astro-weekly-101"
     }
   ],
   education: [
