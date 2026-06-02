@@ -1,11 +1,94 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro"
+import Section from "../components/Section.astro"
+import projects from "../data/projects"
+import { getImage } from "astro:assets"
+import Carousel from "../components/Carousel"
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const importedThumbnails = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/thumbnails/*/*.{svg,png,jpg,jpeg}",
+  { eager: true }
+)
+
+const optimizedThumbnails = await Promise.all(
+  Object.entries(importedThumbnails).map(async ([key, val]) => {
+    const result = await getImage({
+      src: val.default,
+      format: "webp",
+      widths: [... new Set([val.default.width, 640, 768, 1024, 1280, 1920, 2048, 3840])].sort((a, b) => a - b).filter(w => w <= val.default.width)
+    })
+    return { name: key, result }
+  })
+)
 ---
 
 <Layout>
-	<Welcome />
+  <Section>
+    <section class="my-24 md:my-32 max-w-120 md:max-w-160">
+      <header class="h1">
+        <h1>Adrian Keim is a designer with a passion for bringing brilliant ideas to life.</h1>
+        <p class="mt-4 text-metal-500">Currently available for hire.</p>
+      </header>
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a
+          href="/about"
+          class="bg-linear-to-b from-white to-pink-200 hover:from-pink-100 hover:to-pink-300 active:to-pink-100 text-pink-800 text-shadow-xs text-shadow-white/40 border border-pink-500 inset-ring inset-ring-white h-8 px-3 rounded-lg flex items-center"
+        >
+          Read about me
+        </a>
+        <a
+          href="mailto:hello@aetinx.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-linear-to-b from-white to-metal-200 hover:from-metal-100 hover:to-metal-300 active:to-metal-100 text-metal-800 text-shadow-xs text-shadow-white/40 border border-metal-500 inset-ring inset-ring-white h-8 px-3 rounded-lg flex items-center"
+        >
+          Get in touch
+        </a>
+      </div>
+    </section>
+    <main class="flex flex-col gap-12 md:gap-24">
+      {
+        Object.entries(projects).map(([key, value]) => {
+          return (
+            <div>
+              <Carousel
+                client:load
+                images={(value.thumbnails ?? []).map((x) => ({
+                  image: Object.fromEntries(
+                    optimizedThumbnails.map(({ name, result }) => [name, result])
+                  )[`/src/assets/thumbnails/${key}/${x.url}`],
+                  alt: x.alt
+                }))}
+              />
+              <div class="max-w-2xl">
+                <div class="font-semibold text-xl mt-6 leading-[125%] text-pretty">
+                  <div>{value.name ?? (<mark>A name needs to be set!</mark>)}</div>
+                  <div class="text-metal-500 mt-1">{value.desc ?? (<mark>A description needs to be set!</mark>)}</div>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 mt-4">
+                {value.ongoing && (
+                  <div class="flex items-center h-5 px-2 text-xs font-semibold uppercase tracking-widest rounded-sm bg-metal-500 text-white">
+                    Ongoing
+                  </div>
+                )}
+                {value.concept && (
+                  <div class="flex items-center h-5 px-2 text-xs font-semibold uppercase tracking-widest rounded-sm bg-metal-500 text-white">
+                    Concept
+                  </div>
+                )}
+                {(value.tags ?? [])
+                  .sort((a, b) => a.localeCompare(b))
+                  .map((x) => (
+                    <div class="flex items-center h-5 px-2 text-xs font-semibold uppercase tracking-widest rounded-sm border-[1.25px] border-metal-500 text-metal-500">
+                      {x}
+                    </div>
+                  ))}
+              </div>
+            </div>
+          )
+        })
+      }
+    </main>
+  </Section>
 </Layout>

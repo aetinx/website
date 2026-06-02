@@ -1,0 +1,76 @@
+---
+import Wordmark from "../assets/wordmark.svg?raw"
+
+const links = [
+  { href: "/", label: "Work" },
+  { href: "/about", label: "About" },
+  { href: "/resume", label: "Resume" }
+]
+---
+
+<nav class="z-2 flex items-center justify-between h-4 text-metal-500">
+  <a href="/" aria-label="Home" class="[&_svg]:h-3.5 [&_svg]:w-auto [&_path]:fill-current">
+    <div set:html={Wordmark} />
+  </a>
+
+  <button class="nav-toggle md:hidden">NAV ICON</button>
+
+  <ul class="flex items-center gap-8 uppercase font-bold text-xs leading-0 tracking-widest max-md:hidden">
+    {
+      links.map(x => (
+        <li>
+          <a href={x.href}>{x.label}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<div class="nav-mobile-container z-1 bg-white fixed inset-0 top-20 grid place-items-center p-8 pt-0 pb-24 pointer-events-none opacity-0 transition duration-200 ease md:hidden">
+  <ul class="nav-mobile-content flex flex-col items-center justify-center text-2xl gap-4 scale-95 origin-[50%_100%] transition duration-300 ease">
+    {
+      links.map(x => (
+        <li>
+          <a href={x.href}>{x.label}</a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<script is:inline>
+  /*function initMobileNav() {
+    const mobileNavContainer = document.querySelector(".nav-mobile-container")
+    const mobileNavContent = document.querySelector(".nav-mobile-content")
+    const button = document.querySelector(".nav-toggle")
+
+    button?.addEventListener("click", () => {
+      mobileNavContainer?.classList.toggle("nav-mobile-container--open")
+      mobileNavContent?.classList.toggle("nav-mobile-content--open")
+    })
+  }
+
+  document.addEventListener("astro:page-load", initMobileNav)*/
+
+  const mnav = document.querySelector(".nav-mobile-container")
+  const mnavContent = document.querySelector(".nav-mobile-content")
+
+  const showMnav = () => {
+    mnav.classList.add("nav-mobile-container--open")
+    mnavContent.classList.add("nav-mobile-content--open")
+  }
+
+  const removeMnav = () => {
+    mnav.classList.remove("nav-mobile-container--open")
+    mnavContent.classList.remove("nav-mobile-content--open")
+  }
+
+  document.addEventListener("astro:page-load", () => {
+    console.log("page load")
+  })
+
+  let i = 0
+  document.addEventListener("click", () => {
+    console.log(i++)
+  })
+</script>
