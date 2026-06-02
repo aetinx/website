@@ -14,7 +14,7 @@ import about from "../data/about"
   <Section>
     <header class="mt-24 md:mt-32 max-w-100 md:max-w-150">
       <h1 class="h1">I’m Adrian Keim, a design engineer based in Maine.</h1>
-      <div class="flex flex-wrap gap-6 md:gap-8 gap-y-2 text-metal-500 text-lg md:text-xl mt-6 mb-8 font-semibold">
+      <div class="flex flex-wrap gap-4 md:gap-8 gap-y-1 text-metal-500 text-lg md:text-xl mt-6 mb-8 font-semibold">
         <a href="mailto:hello@aetinx.dev" target="_blank">E-mail</a>
         <a href="https://x.com/aetinx" target="_blank">X.com</a>
         <a href="https://github.com/aetinx" target="_blank">GitHub</a>
@@ -43,7 +43,7 @@ import about from "../data/about"
             {
               about.recognition.map(x => (
                 <li>
-                  <article class="grid grid-cols-[1fr_2fr]">
+                  <article class="grid grid-cols-[1fr_2fr] max-md:flex max-md:flex-col">
                     <time class="text-metal-500">{x.year}</time>
                     <div class="flex flex-col">
                       <a href={x.url} target="_blank" class={x.url && "underline"}>
@@ -62,7 +62,7 @@ import about from "../data/about"
             {
               about.education.map(x => (
                 <li>
-                  <article class="grid grid-cols-[1fr_2fr]">
+                  <article class="grid grid-cols-[1fr_2fr] max-md:flex max-md:flex-col">
                     <time class="text-metal-500">{x.years.from === x.years.to ? x.years.from : `${x.years.from}–${x.years.to}`}</time>
                     <div class="flex flex-col">
                       <span>{x.school}</span>
