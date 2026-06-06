@@ -29,7 +29,11 @@ const projects: Record<string, Project> = {
     thumbnails: [
       {
         url: "blue.png",
-        alt: "Yasoku Publishing wordmark.",
+        alt: "Wordmark designed for Yasoku Publishing.",
+      },
+      {
+        url: "logo.png",
+        alt: "Logo designed for Yasoku Publishing."
       },
       /* {
         url: "old-style.png",
@@ -43,10 +47,10 @@ const projects: Record<string, Project> = {
         url: "laundry-icons.png",
         alt: "Custom laundry icons designed for Yasoku Publishing.",
       },
-      {
+      /* {
         url: "product-card.png",
         alt: "Product card for the Yasoku Publishing online storefront.",
-      },
+      }, */
       {
         url: "storefront-homepage.png",
         alt: "UI design for the homepage of Yasoku Publishing's online storefront.",
@@ -55,14 +59,14 @@ const projects: Record<string, Project> = {
         url: "storefront-product.png",
         alt: "UI design for a product page on Yasoku Publishing's online storefront.",
       },
-      {
+      /* {
         url: "mtn-dew.png",
         alt: "Custom logos for Mountain Dew themed Yasoku Publishing logo variants.",
       },
       {
         url: "cot.png",
         alt: "Render of a NASCAR Car of Tomorrow Chevrolet Impala SS with a Dale Earnhardt Jr. inspired livery sponsored by Yasoku Publishing.",
-      },
+      }, */
     ],
     tags: ["iconography", "lettering", "logomark", "visual identity", "web"],
     ongoing: true,
@@ -85,6 +89,10 @@ const projects: Record<string, Project> = {
       },
       {
         url: "legacy-0.png",
+        alt: "Preview of symbols from a legacy icon set.",
+      },
+      {
+        url: "legacy-1.png",
         alt: "Preview of symbols from a legacy icon set.",
       }
     ],
