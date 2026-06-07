@@ -86,7 +86,7 @@ const profile: Profile = {
     "Windows 7 and XP",
     "Browsing art on the Web",
     "JavaScript",
-    "Figma's Otto Layout"
+    "Figma’s Otto Layout"
   ],
   contacts: [
     {
@@ -116,10 +116,6 @@ const profile: Profile = {
     {
       name: "Liam Fennell",
       url: "https://fennell.cv"
-    },
-    {
-      name: "Dany Bolshakov",
-      url: "https://dany.works/"
     },
     {
       name: "Henor Kelmendi",

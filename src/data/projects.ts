@@ -44,6 +44,10 @@ const projects: Record<string, Project> = {
         alt: "Custom icons designed for Yasoku Publishing.",
       }, */
       {
+        url: "typical-laundry-icons.png",
+        alt: "Custom laundry icons designed for Yasoku Publishing.",
+      },
+      {
         url: "laundry-icons.png",
         alt: "Custom laundry icons designed for Yasoku Publishing.",
       },
@@ -53,11 +57,11 @@ const projects: Record<string, Project> = {
       }, */
       {
         url: "storefront-homepage.png",
-        alt: "UI design for the homepage of Yasoku Publishing's online storefront.",
+        alt: "UI design for the homepage of Yasoku Publishing’s online storefront.",
       },
       {
         url: "storefront-product.png",
-        alt: "UI design for a product page on Yasoku Publishing's online storefront.",
+        alt: "UI design for a product page on Yasoku Publishing’s online storefront.",
       },
       /* {
         url: "mtn-dew.png",
@@ -87,10 +91,10 @@ const projects: Record<string, Project> = {
         url: "belmont-grid.png",
         alt: "Preview of symbols from Symbols Belmont on 32x32 grids.",
       },
-      {
+      /* {
         url: "legacy-0.png",
         alt: "Preview of symbols from a legacy icon set.",
-      },
+      }, */
       {
         url: "legacy-1.png",
         alt: "Preview of symbols from a legacy icon set.",
