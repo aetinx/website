@@ -52,6 +52,12 @@ const profile: Profile = {
       url: "https://headers.club/"
     },
     {
+      issuer: "Websites on Display",
+      title: "Featured website: aetinx.dev",
+      year: "2025",
+      url: "https://ondisplay.website/site/aetinx"
+    },
+    {
       issuer: "Astro Weekly",
       title: "Astro Weekly #101",
       year: "2025",
