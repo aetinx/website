@@ -1,0 +1,135 @@
+---
+import "../styles/resume.css"
+import Wordmark from "../assets/wordmark.svg?raw"
+import Meta from "../components/Meta.astro"
+import about from "../data/about"
+import Mail from "../assets/symbols/belmont/mail.svg?raw"
+import X from "../assets/symbols/belmont/brand-xcorp.svg?raw"
+import GitHub from "../assets/symbols/belmont/brand-github.svg?raw"
+import LinkedIn from "../assets/symbols/belmont/brand-linkedin.svg?raw"
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Meta
+      metadata={{
+        title: "Resume",
+        description: "This is my wonderful resume, generated using Astro and Tailwind instead of a word processor."
+      }}
+    />
+  </head>
+  <body class="font-medium text-pretty">
+    <section class="mb-8">
+      <h1 class="text-metal-500">
+        <a href="/" aria-label="Home" class="inline-block [&_svg]:h-5 [&_svg]:w-auto [&_path]:fill-current" set:html={Wordmark} />
+      </h1>
+      <ul class="flex flex-wrap items-center justify-start gap-6 gap-y-2 mt-4">
+        <li>
+          <a class="flex items-center gap-2" href="mailto:hello@aetinx.dev" target="_blank">
+            <div class="[&_svg]:h-4 [&_svg]:w-auto [&_path]:fill-current" set:html={Mail} />
+            <span>hello@aetinx.dev</span>
+          </a>
+        </li>
+        <li>
+          <a class="flex items-center gap-2" href="//x.com/aetinx" target="_blank">
+            <div class="[&_svg]:h-4 [&_svg]:w-auto [&_path]:fill-current" set:html={X} />
+            <span>@aetinx</span>
+          </a>
+        </li>
+        <li>
+          <a class="flex items-center gap-2" href="//github.com/aetinx" target="_blank">
+            <div class="[&_svg]:h-4 [&_svg]:w-auto [&_path]:fill-current" set:html={GitHub} />
+            <span>@aetinx</span>
+          </a>
+        </li>
+        <li>
+          <a class="flex items-center gap-2" href="//linkedin.com/in/aetinx" target="_blank">
+            <div class="[&_svg]:h-4 [&_svg]:w-auto [&_path]:fill-current" set:html={LinkedIn} />
+            <span>@aetinx</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="columns-2 gap-12">
+      <section>
+        <h2>Certifications</h2>
+        <ul class="flex flex-col gap-4">
+          {
+            about.certs.map(x => (
+              <li>
+                <article class="flex justify-between gap-2">
+                  <div class="flex flex-col gap-1">
+                    <div>{x.name}</div>
+                    <span class="text-metal-500">{x.issuer}</span>
+                  </div>
+                  <time class="text-metal-500">{x.time}</time>
+                </article>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+      <section>
+        <h2>Skills</h2>
+        <section class="flex flex-col gap-4">
+          <section>
+            <h3 class="font-semibold inline">Software:</h3>
+            <ul class="inline ml-1">
+              {about.stack.map((x, i) => <li class="inline">{`${x.name}${i < about.stack.length - 1 ? ", " : ""}`}</li>)}
+            </ul>
+          </section>
+          <section>
+            <h3 class="font-semibold inline">Technical skills:</h3>
+            <ul class="inline ml-1">
+              {about.skills.map((x, i) => <li class="inline">{`${x}${i < about.skills.length - 1 ? ", " : ""}`}</li>)}
+            </ul>
+          </section>
+          <section>
+            <h3 class="font-semibold inline">Languages and frameworks:</h3>
+            <ul class="inline ml-1">
+              {about.langs.map((x, i) => <li class="inline">{`${x.name}${i < about.langs.length - 1 ? ", " : ""}`}</li>)}
+            </ul>
+          </section>
+        </section>
+      </section>
+      <section>
+        <h2>Education</h2>
+        <ul class="flex flex-col gap-4">
+          {
+            about.education.map(x => (
+              <li>
+                <article class="flex justify-between gap-2">
+                  <div class="flex flex-col gap-1">
+                    <div>{x.school}</div>
+                    <span class="text-metal-500">{x.study}</span>
+                  </div>
+                  <time class="text-metal-500">{x.years.from === x.years.to ? x.years.from : `${x.years.from}–${x.years.to}`}</time>
+                </article>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+      <section>
+        <h2>Recognition</h2>
+        <ul class="flex flex-col gap-4">
+          {
+            about.recognition.map(x => (
+              <li>
+                <article class="flex justify-between gap-2">
+                  <div class="flex flex-col gap-1">
+                    <div>{x.issuer}</div>
+                    <span class="text-metal-500">{x.title}</span>
+                  </div>
+                  <time class="text-metal-500">{x.year}</time>
+                </article>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </section>
+  </body>
+</html>

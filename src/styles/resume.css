@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@import "./base.css";
+
+html {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background: white;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  box-sizing: border-box;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  font-size: 10pt;
+  page-break-inside: avoid;
+  background: white;
+  margin: 0;
+  width: min(8.5in, 100%);
+}
+
+@media screen and (min-width: 9in) {
+  html {
+    @apply bg-metal-200;
+    padding: clamp(0px, calc((100% - 8.5in) / 2), 64px);
+  }
+
+  body {
+    padding: 0.5in;
+  }
+}
+
+h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+section {
+  page-break-inside: avoid;
+}
+
+body > section > section ~ section {
+  margin-top: 32px;
+}
+
+@media print {
+  html {
+    background: none;
+  }
+
+  body {
+    background: none;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+  }
+}
+
+@page {
+  size: 8.5in 11in;
+  margin: 0.5in;
+}
