@@ -52,7 +52,7 @@ import LinkedIn from "../assets/symbols/belmont/brand-linkedin.svg?raw"
       </ul>
     </section>
 
-    <section class="columns-2 gap-12">
+    <section class="md:columns-2 gap-12">
       <section>
         <h2>Certifications</h2>
         <ul class="flex flex-col gap-4">
@@ -64,7 +64,7 @@ import LinkedIn from "../assets/symbols/belmont/brand-linkedin.svg?raw"
                     <div>{x.name}</div>
                     <span class="text-metal-500">{x.issuer}</span>
                   </div>
-                  <time class="text-metal-500">{x.time}</time>
+                  <time class="text-metal-500 shrink-0">{x.time}</time>
                 </article>
               </li>
             ))
@@ -105,7 +105,7 @@ import LinkedIn from "../assets/symbols/belmont/brand-linkedin.svg?raw"
                     <div>{x.school}</div>
                     <span class="text-metal-500">{x.study}</span>
                   </div>
-                  <time class="text-metal-500">{x.years.from === x.years.to ? x.years.from : `${x.years.from}–${x.years.to}`}</time>
+                  <time class="text-metal-500 shrink-0">{x.years.from === x.years.to ? x.years.from : `${x.years.from}–${x.years.to}`}</time>
                 </article>
               </li>
             ))
@@ -123,7 +123,7 @@ import LinkedIn from "../assets/symbols/belmont/brand-linkedin.svg?raw"
                     <div>{x.issuer}</div>
                     <span class="text-metal-500">{x.title}</span>
                   </div>
-                  <time class="text-metal-500">{x.year}</time>
+                  <time class="text-metal-500 shrink-0">{x.year}</time>
                 </article>
               </li>
             ))

@@ -21,14 +21,17 @@ body {
   width: min(8.5in, 100%);
 }
 
-@media screen and (min-width: 9in) {
+@media screen and (min-width: 8.5in) {
   html {
     @apply bg-metal-200;
     padding: clamp(0px, calc((100% - 8.5in) / 2), 64px);
   }
+}
 
+@media screen {
   body {
     padding: 0.5in;
+    min-height: 11in;
   }
 }
 
