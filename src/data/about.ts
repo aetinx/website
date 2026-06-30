@@ -1,4 +1,5 @@
 type Profile = {
+  experience: ExperienceItem[]
   skills: string[]
   recognition: RecognitionItem[]
   education: EducationItem[]
@@ -7,6 +8,15 @@ type Profile = {
   certs: Cert[]
   langs: Lang[]
   contacts: Contact[]
+}
+
+type ExperienceItem = {
+  company: string
+  role: string
+  years: {
+    from: number
+    to?: number
+  }
 }
 
 type RecognitionItem = {
@@ -50,6 +60,15 @@ type Contact = {
 }
 
 const profile: Profile = {
+  experience: [
+    {
+      company: "Yasoku Publishing",
+      role: "Brand Designer",
+      years: {
+        from: 2026,
+      },
+    },
+  ],
   skills: [
     "Brand & identity",
     "Iconography",
@@ -119,8 +138,10 @@ const profile: Profile = {
     { name: "Notion" },
     { name: "Lightroom Classic" },
     { name: "InDesign" },
+    { name: "Premiere" },
     { name: "WordPress" },
-    { name: "Framer" }
+    { name: "Framer" },
+    { name: "Blender" },
   ],
   certs: [
     {
@@ -144,6 +165,8 @@ const profile: Profile = {
     { name: "Next.js" },
     { name: "Eleventy" },
     { name: "Nunjucks" },
+    { name: "Git" },
+    { name: "DHTML" },
     { name: "Web Components" }
   ],
   contacts: [

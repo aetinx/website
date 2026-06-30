@@ -43,10 +43,10 @@ const projects: Record<string, Project> = {
         url: "general-icons.png",
         alt: "Custom icons designed for Yasoku Publishing.",
       }, */
-      {
+      /* {
         url: "typical-laundry-icons.png",
         alt: "Custom laundry icons designed for Yasoku Publishing.",
-      },
+      }, */
       {
         url: "laundry-icons.png",
         alt: "Custom laundry icons designed for Yasoku Publishing.",
@@ -71,6 +71,10 @@ const projects: Record<string, Project> = {
         url: "cot.png",
         alt: "Render of a NASCAR Car of Tomorrow Chevrolet Impala SS with a Dale Earnhardt Jr. inspired livery sponsored by Yasoku Publishing.",
       }, */
+      {
+        url: "kg.png",
+        alt: "Yasoku Publishing billboard featured being knocked over by cars in the video game Kaido Genkai."
+      }
     ],
     tags: ["iconography", "lettering", "logomark", "visual identity", "web"],
     ongoing: true,

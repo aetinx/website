@@ -3,6 +3,7 @@ import "../styles/resume.css"
 import Wordmark from "../assets/wordmark.svg?raw"
 import Meta from "../components/Meta.astro"
 import about from "../data/about"
+import Globe from "../assets/symbols/belmont/globe.svg?raw"
 import Mail from "../assets/symbols/belmont/mail.svg?raw"
 import X from "../assets/symbols/belmont/brand-xcorp.svg?raw"
 import GitHub from "../assets/symbols/belmont/brand-github.svg?raw"
@@ -25,29 +26,35 @@ import LinkedIn from "../assets/symbols/belmont/brand-linkedin.svg?raw"
   <body class="font-medium text-pretty">
     <section class="mb-8">
       <h1 class="text-metal-500">
-        <a href="/" aria-label="Home" class="inline-block [&_svg]:h-5 [&_svg]:w-auto [&_path]:fill-current" set:html={Wordmark} />
+        <a href="//aetinx.dev" aria-label="Home" class="inline-block [&_svg]:h-5 [&_svg]:w-auto [&_path]:fill-current" set:html={Wordmark} />
       </h1>
       <ul class="flex flex-wrap items-center justify-start gap-6 gap-y-2 mt-4">
         <li>
-          <a class="flex items-center gap-2" href="mailto:hello@aetinx.dev" target="_blank">
+          <a class="flex items-center gap-1.5" href="//aetinx.dev" target="_blank">
+            <div class="[&_svg]:h-4 [&_svg]:w-auto [&_path]:fill-current" set:html={Globe} />
+            <span>aetinx.dev</span>
+          </a>
+        </li>
+        <li>
+          <a class="flex items-center gap-1.5" href="mailto:hello@aetinx.dev" target="_blank">
             <div class="[&_svg]:h-4 [&_svg]:w-auto [&_path]:fill-current" set:html={Mail} />
             <span>hello@aetinx.dev</span>
           </a>
         </li>
         <li>
-          <a class="flex items-center gap-2" href="//x.com/aetinx" target="_blank">
+          <a class="flex items-center gap-1.5" href="//x.com/aetinx" target="_blank">
             <div class="[&_svg]:h-4 [&_svg]:w-auto [&_path]:fill-current" set:html={X} />
             <span>@aetinx</span>
           </a>
         </li>
-        <li>
-          <a class="flex items-center gap-2" href="//github.com/aetinx" target="_blank">
+        <!-- <li>
+          <a class="flex items-center gap-1.5" href="//github.com/aetinx" target="_blank">
             <div class="[&_svg]:h-4 [&_svg]:w-auto [&_path]:fill-current" set:html={GitHub} />
             <span>@aetinx</span>
           </a>
-        </li>
+        </li> -->
         <li>
-          <a class="flex items-center gap-2" href="//linkedin.com/in/aetinx" target="_blank">
+          <a class="flex items-center gap-1.5" href="//linkedin.com/in/aetinx" target="_blank">
             <div class="[&_svg]:h-4 [&_svg]:w-auto [&_path]:fill-current" set:html={LinkedIn} />
             <span>@aetinx</span>
           </a>
@@ -55,25 +62,30 @@ import LinkedIn from "../assets/symbols/belmont/brand-linkedin.svg?raw"
       </ul>
     </section>
 
-    <section class="md:columns-2 print:columns-2 gap-12">
+    <!-- <section class="mb-8">
+      <h2>Experience</h2>
       <section>
-        <h2>Certifications</h2>
-        <ul class="flex flex-col gap-4">
-          {
-            about.certs.map(x => (
-              <li>
-                <article class="flex justify-between gap-2">
-                  <div class="flex flex-col gap-1">
-                    <div>{x.name}</div>
-                    <span class="text-metal-500">{x.issuer}</span>
-                  </div>
-                  <time class="text-metal-500 shrink-0">{x.time}</time>
-                </article>
-              </li>
-            ))
-          }
+        <ul>
+          <li>
+            <article>
+              <div class="flex justify-between gap-2">
+                <div>
+                  <span class="font-semibold">Brand Designer</span>, <span>Yasoku Publishing</span>
+                </div>
+                <time class="text-metal-500 shrink-0">2026 &ndash; Now</time>
+              </div>
+              <div class="mt-1 text-metal-600">
+                <p>
+                  Designing a new visual identity, as well as creating a new online storefront.
+                </p>
+              </div>
+            </article>
+          </li>
         </ul>
       </section>
+    </section> -->
+
+    <section class="md:columns-2 print:columns-2 gap-12">
       <section>
         <h2>Skills</h2>
         <section class="flex flex-col gap-4">
@@ -90,7 +102,7 @@ import LinkedIn from "../assets/symbols/belmont/brand-linkedin.svg?raw"
             </ul>
           </section>
           <section>
-            <h3 class="font-semibold inline">Languages and frameworks:</h3>
+            <h3 class="font-semibold inline">Technologies:</h3>
             <ul class="inline ml-1">
               {about.langs.map((x, i) => <li class="inline">{`${x.name}${i < about.langs.length - 1 ? ", " : ""}`}</li>)}
             </ul>
@@ -98,17 +110,17 @@ import LinkedIn from "../assets/symbols/belmont/brand-linkedin.svg?raw"
         </section>
       </section>
       <section>
-        <h2>Education</h2>
-        <ul class="flex flex-col gap-4">
+        <h2>Certifications</h2>
+        <ul class="flex flex-col gap-3">
           {
-            about.education.map(x => (
+            about.certs.map(x => (
               <li>
                 <article class="flex justify-between gap-2">
-                  <div class="flex flex-col gap-1">
-                    <div>{x.school}</div>
-                    <span class="text-metal-500">{x.study}</span>
+                  <div class="flex flex-col gap-0.5">
+                    <div>{x.name}</div>
+                    <span class="text-metal-500">{x.issuer}</span>
                   </div>
-                  <time class="text-metal-500 shrink-0">{x.years.from === x.years.to ? x.years.from : `${x.years.from}–${x.years.to}`}</time>
+                  <time class="text-metal-500 shrink-0">{x.time}</time>
                 </article>
               </li>
             ))
@@ -117,16 +129,36 @@ import LinkedIn from "../assets/symbols/belmont/brand-linkedin.svg?raw"
       </section>
       <section>
         <h2>Recognition</h2>
-        <ul class="flex flex-col gap-4">
+        <ul class="flex flex-col gap-3">
           {
             about.recognition.map(x => (
               <li>
                 <article class="flex justify-between gap-2">
-                  <div class="flex flex-col gap-1">
+                  <div class="flex flex-col gap-0.5">
                     <div>{x.issuer}</div>
                     <span class="text-metal-500">{x.title}</span>
                   </div>
                   <time class="text-metal-500 shrink-0">{x.year}</time>
+                </article>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+      <section>
+        <h2>Education</h2>
+        <ul class="flex flex-col gap-3">
+          {
+            about.education.map(x => (
+              <li>
+                <article class="flex justify-between gap-2">
+                  <div class="flex flex-col gap-0.5">
+                    <div>{x.school}</div>
+                    <span class="text-metal-500">{x.study}</span>
+                  </div>
+                  <time class="text-metal-500 shrink-0">
+                    {x.years.from === x.years.to ? x.years.from : `${x.years.from} – ${x.years.to}`}
+                  </time>
                 </article>
               </li>
             ))
