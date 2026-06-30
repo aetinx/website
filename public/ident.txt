@@ -1,0 +1,31 @@
+IDENTITY
+
+E-mail:         hello@aetinx.dev
+
+Bluesky:        aetinx.dev (did:plc:c7toat7oeimv34iobeghvnew)
+Discord:        @aetinx <@723149146596311071>
+GitHub:         @aetinx
+Instagram:      @aetinx
+LinkedIn:       @aetinx
+Mas.to:         @aetinx
+Matrix:         @aetinx:matrix.org
+Telegram:       t.me/aetinx
+Tumblr:         @aetinx
+X:              @aetinx
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: Adrian Keim <hello@aetinx.dev>
+Comment: Fingerprint: 899C A159 FBD4 2F67 9DE4  1930 6D6E 863A D266 3A3F
+
+mDMEaj9gJRYJKwYBBAHaRw8BAQdAUdhz1QXxpoZs2ToykTOUAVdXaTgSDGe87McD
+G0+v4YG0HkFkcmlhbiBLZWltIDxoZWxsb0BhZXRpbnguZGV2PoivBBMWCgBXFiEE
+iZyhWfvUL2ed5BkwbW6GOtJmOj8FAmo/YCUbFIAAAAAABAAObWFudTIsMi41KzEu
+MTIsMiwxAhsDBQsJCAcCAiICBhUKCQgLAgQWAgMBAh4HAheAAAoJEG1uhjrSZjo/
+SiYBAM0v/zXNxiAq664GBJkohU0K96f0P1Hs9WF5UNmuF55EAP9dDEq2LS/uyGAb
+GcCEzlsiMLQv0/FuQGcZea2+3P7WCbg4BGo/YCUSCisGAQQBl1UBBQEBB0Bqzaro
+/wLQumB2XxP1E7MVf9eMsJ3FMxT2/a96HoWODgMBCAeIlAQYFgoAPBYhBImcoVn7
+1C9nneQZMG1uhjrSZjo/BQJqP2AlGxSAAAAAAAQADm1hbnUyLDIuNSsxLjEyLDIs
+MQIbDAAKCRBtboY60mY6P0jEAQCXcL6DF/efktrpzdO6W2/oOECjFi+zlFL7DTJ0
+PEefRAD/f79IG3uB5xkeui5zfh1Gcz2wB0ykElHseRau7Hr5aA8=
+=1OcK
+-----END PGP PUBLIC KEY BLOCK-----
