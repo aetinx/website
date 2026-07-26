@@ -73,10 +73,10 @@ const profile: Profile = {
     "Brand & identity",
     "Iconography",
     "Lettering",
-    "Livery design",
     "Photography",
     "Product design",
     "UI animation",
+    "Virtual livery design",
     "Web design",
     "Web technologies",
   ],
@@ -122,7 +122,6 @@ const profile: Profile = {
     "NASCAR",
     "Neon Genesis: Evangelion",
     "Ghost in the Shell: S.A.C.",
-    "Listening to music",
     "Racing simulators",
     "Kraft Mac & Cheese",
     "Windows 7 and XP",
@@ -136,12 +135,12 @@ const profile: Profile = {
     { name: "GitHub" },
     { name: "Cloudflare" },
     { name: "Notion" },
+    { name: "Framer" },
     { name: "Lightroom Classic" },
     { name: "InDesign" },
     { name: "Premiere" },
-    { name: "WordPress" },
-    { name: "Framer" },
     { name: "Blender" },
+    { name: "WordPress" }
   ],
   certs: [
     {
@@ -167,7 +166,8 @@ const profile: Profile = {
     { name: "Nunjucks" },
     { name: "Git" },
     { name: "DHTML" },
-    { name: "Web Components" }
+    { name: "Web Components" },
+    { name: "Figma Plugin API" }
   ],
   contacts: [
     {
@@ -179,10 +179,6 @@ const profile: Profile = {
       url: "https://ana.sh",
     },
     {
-      name: "Lucia Scarlet",
-      url: "https://lucia.red",
-    },
-    {
       name: "Blank Resident",
       url: "https://www.linkedin.com/in/blankresident/",
     },
@@ -191,40 +187,8 @@ const profile: Profile = {
       url: "https://gleb.sexy",
     },
     {
-      name: "Gabriel Foulon",
-      url: "https://x.com/GabFoulon",
-    },
-    {
-      name: "Liam Fennell",
-      url: "https://fennell.cv",
-    },
-    {
-      name: "Henor Kelmendi",
-      url: "https://henor.is/",
-    },
-    {
-      name: "Clément Rozé",
-      url: "https://clementroze.com/",
-    },
-    {
-      name: "Tom Heliere",
-      url: "https://tomthings.fr/",
-    },
-    {
-      name: "Celeste (vmfunc)",
-      url: "https://vmfunc.re/",
-    },
-    {
-      name: "Skyler Curtis Fox",
-      url: "https://x.com/SkylerCurtisFox",
-    },
-    {
-      name: "Vince Linise",
-      url: "https://vincelinise.com/",
-    },
-    {
-      name: "Newar A.",
-      url: "https://www.newar.net/",
+      name: "Lucia Scarlet",
+      url: "https://lucia.red",
     },
     {
       name: "Wojtek Witkowski",
@@ -239,16 +203,48 @@ const profile: Profile = {
       url: "https://www.zachroszczewski.com/",
     },
     {
-      name: "William Gibson",
-      url: "https://william.cv/",
+      name: "Newar A.",
+      url: "https://www.newar.net/",
     },
     {
-      name: "Liam Matteson",
-      url: "https://www.liam.cv/",
+      name: "Gabriel Foulon",
+      url: "https://x.com/GabFoulon",
+    },
+    {
+      name: "Tom Heliere",
+      url: "https://tomthings.fr/",
+    },
+    {
+      name: "Liam Fennell",
+      url: "https://fennell.cv",
+    },
+    {
+      name: "Henor Kelmendi",
+      url: "https://henor.is/",
+    },
+    {
+      name: "Clément Rozé",
+      url: "https://clementroze.com/",
+    },
+    {
+      name: "Vince Linise",
+      url: "https://vincelinise.com/",
     },
     {
       name: "Eian Blade",
       url: "https://eian.studio/",
+    },
+    {
+      name: "YS Chung",
+      url: "https://yschung.org",
+    },
+    {
+      name: "William Gibson",
+      url: "https://william.cv/",
+    },
+    {
+      name: "Skyler Curtis Fox",
+      url: "https://x.com/SkylerCurtisFox",
     },
   ],
 }

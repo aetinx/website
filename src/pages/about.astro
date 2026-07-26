@@ -27,7 +27,7 @@ import about from "../data/about"
           Guided by a love of exceptional design, it’s my mission to create extraordinary work of my own, and to create for public good.
         </p>
         <p>
-          When not creating, I enjoy spending my time driving in racing simulators, curating tasteful inspiration, and hanging out with
+          When not creating, I enjoy spending my time curating design inspiration, driving in racing simulators, and hanging out with
           friends.
         </p>
       </div>
@@ -57,7 +57,7 @@ import about from "../data/about"
             }
           </ul>
         </AboutSection>
-        <AboutSection title="Education">
+        <!-- <AboutSection title="Education">
           <ul class="flex flex-col gap-4">
             {
               about.education.map(x => (
@@ -73,7 +73,7 @@ import about from "../data/about"
               ))
             }
           </ul>
-        </AboutSection>
+        </AboutSection> -->
         <AboutSection title="Network">
           <ul class="flex flex-wrap gap-x-4 gap-y-2">
             {
@@ -87,9 +87,19 @@ import about from "../data/about"
             }
           </ul>
         </AboutSection>
-        <AboutSection title="Interests">
+        <!-- <AboutSection title="Interests">
           <ul class="flex flex-wrap gap-x-4 gap-y-2">
             {about.interests.map(x => <li>{x}</li>)}
+          </ul>
+        </AboutSection> -->
+        <AboutSection title="Software">
+          <ul class="flex flex-wrap gap-x-4 gap-y-2">
+            {about.stack.map(x => <li>{x.name}</li>)}
+          </ul>
+        </AboutSection>
+        <AboutSection title="Technologies">
+          <ul class="flex flex-wrap gap-x-4 gap-y-2">
+            {about.langs.map(x => <li>{x.name}</li>)}
           </ul>
         </AboutSection>
         <AboutSection title="Colophon">
