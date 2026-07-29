@@ -13,7 +13,7 @@ body {
   text-rendering: optimizeSpeed;
   box-sizing: border-box;
   letter-spacing: 0.01em;
-  font-size: 10pt;
+  font-size: 9pt;
   page-break-inside: avoid;
   background: white;
   margin: 0;
@@ -35,9 +35,9 @@ body {
 }
 
 h2 {
-  font-size: 13pt;
+  font-size: 12pt;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 section {

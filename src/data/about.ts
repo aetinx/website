@@ -149,7 +149,7 @@ const profile: Profile = {
       time: "2024",
     },
     {
-      name: "CTE Broadcast & Multimedia Production (High Honors)",
+      name: "CTE Broadcast & Multimedia Production (High\u00a0Honors)",
       issuer: "Mid\u2011Maine Technical Center",
       time: "2024",
     },
