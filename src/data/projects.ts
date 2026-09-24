@@ -69,7 +69,7 @@ const projects: Record<string, Project> = {
       },
       {
         url: "cot.png",
-        alt: "Render of a NASCAR Car of Tomorrow Chevrolet Impala SS with a Dale Earnhardt Jr. inspired livery sponsored by Yasoku Publishing.",
+        alt: "3D render of a NASCAR Car of Tomorrow Chevrolet Impala SS with a Dale Earnhardt Jr. inspired livery sponsored by Yasoku Publishing.",
       }, */
       {
         url: "kg.png",
@@ -106,6 +106,73 @@ const projects: Record<string, Project> = {
     ],
     tags: ["graphics", "iconography", "web"],
     ongoing: true,
+  },
+  "car-renders": {
+    desc: "Various renders paint schemes and Blender renders.",
+    name: "Car renders and liveries",
+    thumbnails: [
+      {
+        url: "helium-noaps.png",
+        alt: "3D render of #44 Helium Browser livery on a O'Reilly Series Chevrolet Camaro."
+      },
+      {
+        url: "helium-noaps-1.png",
+        alt: "3D render of #44 Helium Browser livery on a O'Reilly Series Chevrolet Camaro."
+      },
+      {
+        url: "mtn-dew-yasoku-cot.png",
+        alt: "3D render of a NASCAR Car of Tomorrow Chevrolet Impala SS with a Dale Earnhardt Jr. inspired #37 Yasoku Publishing livery sponsored by Yasoku Publishing."
+      },
+      /* {
+        url: "37h4th38ndjhjsfmnazUntitled.png",
+        alt: "3D render of a NASCAR Car of Tomorrow Chevrolet Impala SS with a Dale Earnhardt Jr. inspired livery sponsored by Yasoku Publishing."
+      }, */
+      {
+        url: "43f5d2343vert57hxzUntitled.png",
+        alt: "3D render of a NASCAR Car of Tomorrow Chevrolet Impala SS with a Dale Earnhardt Jr. inspired livery sponsored by Yasoku Publishing."
+      }
+    ],
+    tags: ["3d", "graphics", "liveries"]
+  },
+  liveries: {
+    desc: "Custom paint schemes created for the cult-classic racing simulator NASCAR Racing 2003 Season.",
+    name: "Liveries for NR2003",
+    thumbnails: [
+      {
+        url: "u98m4u92u4cm92m3c9.png",
+        alt: "Custom livery of Adrian Keim #37 Tinder Chevrolet Monte Carlo for the Cup Series in NASCAR Racing 2003 Season.",
+      },
+      {
+        url: "34c354563463ds0oiyutyjrjr.png",
+        alt: "Custom livery of Adrian Keim #37 Tinder Chevrolet Monte Carlo for the Cup Series in NASCAR Racing 2003 Season.",
+      },
+      /* {
+        url: "37h4th38ndjhjsfmnazUntitled.png",
+        alt: "Custom render of Adrian Keim #37 Yasoku Publishing Chevrolet Impala NASCAR Car of Tomorrow at New Hampsire Motor Speedway."
+      }, */
+      {
+        url: "Greenshot 2025-08-07 15-33-25.png",
+        alt: "NR2003 Cup Series car with a custom livery (Adrian Keim #37 Boys & Girls Clubs of America) shown racing at Oxford Plains Speedway during an in-game race.",
+      },
+      {
+        url: "Greenshot 2025-01-07 01-57-07.png",
+        alt: "Cars from the NCS22 mod in NASCAR Racing 2003 Season, with custom liveries, during an in-game race.",
+      },
+      {
+        url: "Greenshot 2025-01-06 21-30-10.png",
+        alt: "Cars from the NCS22 mod in NASCAR Racing 2003 Season, with custom liveries, during an in-game race.",
+      },
+      {
+        url: "Greenshot 2025-01-06 22-10-48.png",
+        alt: "Cars from the NCS22 mod in NASCAR Racing 2003 Season, with custom liveries, during an in-game race.",
+      },
+      {
+        url: "Greenshot 2025-01-07 00-12-38.png",
+        alt: "NR2003 car from the NCS22 mod with a custom livery (Rob Thompson #25 Arrow) shown racing during an in-game race.",
+      },
+    ],
+    tags: ["3d", "graphics", "liveries"],
+    concept: true,
   },
   archial: {
     desc: "Desktop app for saving and organizing reference media.",
@@ -173,46 +240,6 @@ const projects: Record<string, Project> = {
     ],
     tags: ["graphics", "iconography"],
     ongoing: true,
-  },
-  liveries: {
-    desc: "Custom paint schemes created for the cult-classic racing simulator NASCAR Racing 2003 Season.",
-    name: "Liveries for NR2003",
-    thumbnails: [
-      {
-        url: "u98m4u92u4cm92m3c9.png",
-        alt: "Custom livery of Adrian Keim #37 Tinder Chevrolet Monte Carlo for the Cup Series in NASCAR Racing 2003 Season.",
-      },
-      {
-        url: "34c354563463ds0oiyutyjrjr.png",
-        alt: "Custom livery of Adrian Keim #37 Tinder Chevrolet Monte Carlo for the Cup Series in NASCAR Racing 2003 Season.",
-      },
-      /* {
-        url: "37h4th38ndjhjsfmnazUntitled.png",
-        alt: "Custom render of Adrian Keim #37 Yasoku Publishing Chevrolet Impala NASCAR Car of Tomorrow at New Hampsire Motor Speedway."
-      }, */
-      {
-        url: "Greenshot 2025-08-07 15-33-25.png",
-        alt: "NR2003 Cup Series car with a custom livery (Adrian Keim #37 Boys & Girls Clubs of America) shown racing at Oxford Plains Speedway during an in-game race.",
-      },
-      {
-        url: "Greenshot 2025-01-07 01-57-07.png",
-        alt: "Cars from the NCS22 mod in NASCAR Racing 2003 Season, with custom liveries, during an in-game race.",
-      },
-      {
-        url: "Greenshot 2025-01-06 21-30-10.png",
-        alt: "Cars from the NCS22 mod in NASCAR Racing 2003 Season, with custom liveries, during an in-game race.",
-      },
-      {
-        url: "Greenshot 2025-01-06 22-10-48.png",
-        alt: "Cars from the NCS22 mod in NASCAR Racing 2003 Season, with custom liveries, during an in-game race.",
-      },
-      {
-        url: "Greenshot 2025-01-07 00-12-38.png",
-        alt: "NR2003 car from the NCS22 mod with a custom livery (Rob Thompson #25 Arrow) shown racing during an in-game race.",
-      },
-    ],
-    tags: ["3d", "graphics", "liveries"],
-    concept: true,
   },
 }
 
