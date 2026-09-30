@@ -140,7 +140,8 @@ const profile: Profile = {
     { name: "InDesign" },
     { name: "Premiere" },
     { name: "Blender" },
-    { name: "WordPress" }
+    { name: "WordPress" },
+    { name: "Android Studio" }
   ],
   certs: [
     {
@@ -167,7 +168,9 @@ const profile: Profile = {
     { name: "Git" },
     { name: "DHTML" },
     { name: "Web Components" },
-    { name: "Figma Plugin API" }
+    { name: "Figma Plugin API" },
+    { name: "Kotlin" },
+    { name: "Jetpack Compose" }
   ],
   contacts: [
     {
