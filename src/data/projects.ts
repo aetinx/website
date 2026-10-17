@@ -79,6 +79,18 @@ const projects: Record<string, Project> = {
     tags: ["iconography", "lettering", "logomark", "visual identity", "web"],
     ongoing: true,
   },
+  actions: {
+    desc: "An app that brings kinetic gestures to Android phones of all brands. Developed with Jetpack Compose and Material\xa03 Expressive.",
+    name: "Actions for Android",
+    thumbnails: [
+      {
+        url: "screenshot.png",
+        alt: ""
+      }
+    ],
+    tags: ["product", "software"],
+    ongoing: true
+  },
   symbols: {
     desc: "A collection of icon sets, featuring hundreds upon hundreds of symbols.",
     name: "Symbols",
@@ -175,7 +187,7 @@ const projects: Record<string, Project> = {
     concept: true,
   },
   archial: {
-    desc: "Desktop app for saving and organizing reference media.",
+    desc: "Concept for a desktop app to save and organize reference media.",
     name: "Archial",
     thumbnails: [
       {
@@ -193,6 +205,7 @@ const projects: Record<string, Project> = {
     ],
     tags: ["lettering", "logomark", "product", "software", "visual identity", "web"],
     ongoing: true,
+    concept: true
   },
   "weeby-stitches": {
     desc: "Online indie storefront for anime-inspired apparel and accessories.",
